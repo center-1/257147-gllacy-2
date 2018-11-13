@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Виталий Залогин](https://up.htmlacademy.ru/htmlcss/23/user/257147).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Масленко](https://htmlacademy.ru/profile/biggus-dickus).
 
 ---
 
