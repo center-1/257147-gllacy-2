@@ -5,7 +5,7 @@
 		<title> Глейси - Главная страница </title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 		<!-- 	<link rel="stylesheet" href="css/normalize.css">
-				<link rel="stylesheet" href="css/style.css"> 		 -->
+				<link rel="stylesheet" href="css/style.css"> 		 -->	
 	</head>
 	<body>
 		<header class="main-header container">
@@ -16,7 +16,7 @@
 				<ul>
 					<li>
 						<a href="#"> Каталог </a>
-						<ul class="sub-menu">
+						<ul class="sub-menu visually-hidden">
 							<li><a class="sub-new" href="#"> Новинки </a></li>
 							<li><a href="catalog.html"> Сливочное </a></li>
 							<li><a href="#"> Щербеты </a></li>
@@ -33,12 +33,19 @@
 				</ul>	
 			</nav>
 			<div class="user-block">
-				<form>
-					<input type="text" name="search" placeholder="поиск">
+				<form class="visually-hidden">
+					<input type="text" name="search" placeholder="Что ищем?">
 				</form>
 				<a class="login" href="#">
 					Вход 
 				</a>
+				<form action="https://html.ru" method="post" class="visually-hidden">
+					<input type="email" name="email" placeholder="Электронная почта">
+					<input type="password" name="password" placeholder="Пароль">
+					<input type="submit" value="Войти" name="autorization">
+					<a href="#"> Забыли пароль? </a>
+					<a href="#"> Новая регистрация </a>
+				</form>
 				<a class="login" href="#"> 
 					Пусто
 				</a>
@@ -165,6 +172,14 @@
 				
 				<div class="map">
 					<img src="img/map.jpg" width="900" height="744" alt="Карта, расположения магазина">
+					<form action="https://html.ru" method="post" class="visually-hidden">
+						Мы обязательно вам ответим!
+						<input type="text" name="name" placeholder="Как вас зовут?">
+						<input type="email" name="email" placeholder="Ваша почта для ответа?">
+						<textarea id="comment-field" name="comment" rows="10" cols="40" placeholder="Напишите что-нибудь..."></textarea> 
+						<input type="submit" name="feedback" value="Отправить">
+						<input type="submit" name="close" value="Закрыть">
+					</form>	
 				</div>
 		</main> 
 		
