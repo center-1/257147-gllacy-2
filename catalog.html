@@ -34,12 +34,12 @@
 			</ul>
 		</nav>
 		<div class="user-block">
-			<form>
+			<form action="?" method="get">
 				<input type="search" name="search" placeholder="поиск">
 				<input type="submit" value="поиск">
 			</form>
 			<div class="login">
-				<form>
+				<form action="https://echo.htmlacademy.ru" method="post">
 					<input type="text" name="login" placeholder="логин">
 					<input type="password" name="password" placeholder="пароль">
 					<a href="#"> 
@@ -52,22 +52,28 @@
 				<a class="login" href="#">
 					2 товара 
 				</a>
-				<form action="https://html.ru" method="post" class="visually-hidden">
-					<label>
-						<input type="checkbox" name="creamy-ice">
-						Пломбир с апельсиновым джемом
-						1,5 кг х 200 руб.
-						300 руб.
-					</label> 
-					<label>
-						<input type="checkbox" name="strawberry-ice">
-						Клубничный пломбир с присыпкой из белого шоколада
-						1,5 кг х 300 руб.
-						450 руб.
-					</label> 
-					Итого: 750 руб.
+				<table class="visually-hidden">
+					<tr>
+						<td> </td>		<!-- поле для крестика -->
+						<td> </td>		<!-- логотип мороженки -->
+						<td> Пломбир с апельсиновым джемом </td>
+						<td> 1,5 кг х 200 руб. </td>
+						<td> 300 руб. </td>
+					</tr>
+					<tr>
+						<td> </td>
+						<td> </td>
+						<td> Клубничный пломбир с присыпкой из белого шоколада </td>
+						<td> 1,5 кг х 300 руб. </td>
+						<td> 450 руб. </td>
+					</tr>
+					<tr>
+						<th colspan="5"> Итого: 750 руб. </th>
+					</tr>
+				</table>
+				<form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
 					<input type="submit" value="Оформить заказ" name="checkout">
-				</form>				
+				</form>
 			</div>
 			<p> C 10 до 20, ежедневно </p>
 			<p><a href="tel:8812450-25-25"> 8 812 450-25-25 </a></p>
@@ -88,7 +94,7 @@
 		</ul>
 		<h1> Сливочное мороженое </h1>
 	
-		<form action="https://html.ru" method="post">
+		<form action="?" method="get">
 			<fieldset>
 				<p> Сортировка: </p>
 				<select>
