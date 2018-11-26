@@ -53,27 +53,35 @@
 					2 товара 
 				</a>
 				<table class="visually-hidden">
-					<tr>
-						<td> </td>		<!-- поле для крестика -->
-						<td> </td>		<!-- логотип мороженки -->
-						<td> Пломбир с апельсиновым джемом </td>
-						<td> 1,5 кг х 200 руб. </td>
-						<td> 300 руб. </td>
-					</tr>
-					<tr>
-						<td> </td>
-						<td> </td>
-						<td> Клубничный пломбир с присыпкой из белого шоколада </td>
-						<td> 1,5 кг х 300 руб. </td>
-						<td> 450 руб. </td>
-					</tr>
-					<tr>
-						<th colspan="5"> Итого: 750 руб. </th>
-					</tr>
+					<tbody>
+						<tr>
+							<td><a href="?remove&productId=666">
+								<span class="visually-hidden">Удалить продукт</span>
+								</a>
+							</td>		<!-- поле для крестика -->
+							<td><img src="img/creamy_ice.jpg" width="20" height="20" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>		<!-- логотип мороженки -->
+							<td> Пломбир с апельсиновым джемом </td>
+							<td> 1,5 кг &times; 200 руб. </td>
+							<td> 300 руб. </td>
+						</tr>
+						<tr>
+							<td><a href="?remove&productId=666">
+								<span class="visually-hidden">Удалить продукт</span>
+								</a>
+							</td>
+							<td><img src="img/strawberry_ice.jpg" width="20" height="20" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
+							<td> Клубничный пломбир с присыпкой из белого шоколада </td>
+							<td> 1,5 кг &times; 300 руб. </td>
+							<td> 450 руб. </td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th colspan="5"> Итого: 750 руб. </th>
+						</tr>
+					</tfoot>
 				</table>
-				<form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
-					<input type="submit" value="Оформить заказ" name="checkout">
-				</form>
+				<a href="?order&productId=666&productId=667">Оформить заказ</a>
 			</div>
 			<p> C 10 до 20, ежедневно </p>
 			<p><a href="tel:8812450-25-25"> 8 812 450-25-25 </a></p>
