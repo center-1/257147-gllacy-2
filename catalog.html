@@ -44,7 +44,6 @@
 					<input type="text" name="login" placeholder="логин">
 					<input type="password" name="password" placeholder="пароль">
 					<a href="#"> 
-						<img src="img/login.png" alt="вход">
 						Вход 
 					</a>
 				</form>
@@ -59,8 +58,8 @@
 							<td><a href="?remove&productId=666">
 								<span class="visually-hidden">Удалить продукт</span>
 								</a>
-							</td>		<!-- поле для крестика -->
-							<td><img src="img/creamy_ice.jpg" width="20" height="20" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>		<!-- логотип мороженки -->
+							</td>
+							<td><img src="img/creamy_ice.jpg" width="20" height="20" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
 							<td> Пломбир с апельсиновым джемом </td>
 							<td> 1,5 кг &times; 200 руб. </td>
 							<td> 300 руб. </td>
@@ -90,7 +89,7 @@
 	</header>
 
 	<main class="container">
-		<ul class="breadcrumbs">								<!-- подменю  --> 
+		<ul class="breadcrumbs">
 			<li>
 				<a href="index.html"> Главная </a>
 			</li>
@@ -124,8 +123,12 @@
 					</div>
 					<div class="price-controls">
 						<p> Цена: 100 руб. - 500 руб. </p>
-						от <input class="min-price" type="text" value="100">
-						до <input class="max-price" type="text" value="500">
+						<label for="min-price">
+							от <input id="min-price" class="min-price" type="text" value="100">
+						</label>
+						<label for="max-price">
+							до <input id="max-price" class="max-price" type="text" value="500">
+						</label>
 					</div>
 				</div>
 			</fieldset>
@@ -185,7 +188,7 @@
 			<a href="#">
 				<img src="img/creamy_ice.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 				<h2> Сливочное с апельсиновым джемом и цитрусовой стружкой </h2> 
-				<p> 
+					<p class="price-goods"> 
 					310 р <span> /кг </span>
 				</p>
 			</a> 
@@ -196,7 +199,7 @@
 			<a href="#">
 				<img src="img/coffee_ice.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 				<h2> Сливочно-кофейное с кусочками шоколада </h2> 
-				<p> 
+				<p class="price-goods"> 
 					380 р <span> /кг </span>
 				</p>
 			</a>
@@ -206,7 +209,7 @@
 			<a href="#">
 				<img src="img/strawberry_ice.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 				<h2> Сливочно-клубничное с присыпкой из белого шоколада </h2> 
-				<p> 
+				<p class="price-goods"> 
 					355 р <span> /кг </span>
 				</p>
 			</a>
@@ -216,7 +219,7 @@
 			<a href="#">
 				<img src="img/caramel_ice.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 				<h2> Сливочное крем-брюле с карамельной подливкой </h2> 
-				<p> 
+				<p class="price-goods"> 
 					415 р <span> /кг </span>
 				</p>
 			</a> 
@@ -227,7 +230,7 @@
 			<a href="#">
 				<img src="img/cowberry_ice.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
 				<h2> Сливочное с брусничным джемом </h2> 
-				<p> 
+				<p class="price-goods"> 
 					325 р <span> /кг </span>
 				</p>
 			</a>
@@ -237,7 +240,7 @@
 			<a href="#">
 				<img src="img/bilberry_ice.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
 				<h2> Сливочно-черничное с цельными ягодами черники </h2> 
-				<p> 
+				<p class="price-goods"> 
 					410 р <span> /кг </span>
 				</p>
 			</a>
@@ -247,7 +250,7 @@
 			<a href="#">
 				<img src="img/lemon_ice.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
 				<h2> Сливочно-лимонное с карамельной присыпкой </h2> 
-				<p> 
+				<p class="price-goods"> 
 					375 р <span> /кг </span>
 				</p>
 			</a>
@@ -257,7 +260,7 @@
 			<a href="#">
 				<img src="img/chocolate_ice.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
 				<h2> Сливочное с шоколадной стружкой </h2> 
-				<p> 
+				<p class="price-goods"> 
 					320 р <span> /кг </span>
 				</p>
 			</a>
@@ -268,7 +271,7 @@
 			<a href="#">
 				<img src="img/vanilla_ice.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
 				<h2> Сливочно-ванильное с кусочками шоколада </h2> 
-				<p> 
+				<p class="price-goods"> 
 					440 р <span> /кг </span>
 				</p>
 			</a>
@@ -278,7 +281,7 @@
 			<a href="#">
 				<img src="img/menthol_ice.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом">
 				<h2> Сливочное с ментоловым сиропом </h2> 
-				<p> 
+				<p class="price-goods"> 
 					435 р <span> /кг </span>
 				</p>
 			</a>
@@ -288,7 +291,7 @@
 			<a href="#">
 				<img src="img/black_chocolate_ice.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
 				<h2> Сливочное с кусочками черного шоколада </h2> 
-				<p> 
+				<p class="price-goods"> 
 					355 р <span> /кг </span>
 				</p>
 			</a>
@@ -298,14 +301,14 @@
 			<a href="#">
 				<img src="img/mint_ice.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
 				<h2> Сливочное с мятным сиропом </h2> 
-				<p> 
+				<p class="price-goods"> 
 					420 р <span> /кг </span>
 				</p>
 			</a>
 			<a href="#"> Быстрый просмотр </a>
 		</article>
 
-		<ul class="pagination">				<!-- нумерация страниц -->
+		<ul class="pagination">	
 			<li> 1 </li>
 			<li>
 				<a href="#"> 2 </a>

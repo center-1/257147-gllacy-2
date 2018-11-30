@@ -4,7 +4,7 @@ body {
 	color:					white;
 }
 a {
-	text-decoration: none;
+	text-decoration: 	none;
 }
 .main-menu ul {
 	margin:				0;
@@ -13,31 +13,41 @@ a {
 }
 .main-menu a,
 .main-menu li:first-child {
-	font-size: 		16px;
-	line-height: 	18px;
-	font-weight: 	700;	/*bold=700, medium=500, regular=400 */
-	color:			white;	
+	font-size: 			16px;
+	line-height: 		1.125;
+	font-weight: 		700;
+	color:				white;	
 }
 .sub-menu a:hover {
-  background-color: 	#fbded7;
+	background-color: 	#fbded7;
 }
 .sub-menu a:active {
-  background-color: 	#f6b5a5;
+	background-color: 	#f6b5a5;
+}
+.visually-hidden {
+	position: 		absolute;
+	width:			1px;
+	height: 		1px;
+	margin:			-1px;
+	border: 		0;
+	padding: 		0;
+	clip: 			rect(0 0 0 0);
+	overflow: 		hidden;
 }
 .user-block a {
 	font-size: 		14px;
-	line-height: 	16px;
+	line-height: 	1.142;
 	font-weight: 	500;
 	color:			white;		
 }
 .user-block p {
 	font-size: 		14px;
-	line-height: 	16px;
+	line-height: 	1.142;
 	font-weight: 	700;
 }
 .user-block .phone { 
 	font-size: 		22px;
-	line-height: 	24px;
+	line-height: 	1.090;
 	font-weight: 	700;
 }
 .breadcrumbs {
@@ -48,35 +58,37 @@ a {
 .breadcrumbs a,
 .breadcrumbs li:last-child {
 	font-size: 		14px;
-	line-height: 	16px;
+	line-height: 	1.142;
 	font-weight: 	400;
 	color:			white;
 }
-
-.basket-link  {  /*не работает*/
+.login a {
+	background: 	url(../img/entrance.svg) no-repeat;
+}
+.basket a:first-child { 
 	font-size:			14px;
-	line-height:		16px;
+	line-height:		1.142;
 	font-weight:		500;
+	background: 		url(../img/basket_red.svg) no-repeat;
 	background-color:	white;
 	color:				#323232;
 }
-
 .sel-raspberry p:first-child,
-.sel-chocolate p:first-child  {
-	font-size: 		35px;
-	line-height: 	41px;
-	font-weight: 	700;	
+.sel-chocolate p:first-child {
+	font-size: 			35px;
+	line-height: 		1.171;
+	font-weight: 		700;	
 }
 .sel-raspberry p:nth-child(2),
-.sel-chocolate p:nth-child(2)  {
-	font-size: 		18px;
-	line-height: 	22px;
-	font-weight: 	700;
+.sel-chocolate p:nth-child(2) {
+	font-size: 			18px;
+	line-height: 		1.222;
+	font-weight: 		700;
 }
 .sel-raspberry a,
-.sel-chocolate a  {
+.sel-chocolate a {
 	font-size: 			18px;
-	line-height: 		22px;
+	line-height: 		1.222;
 	font-weight: 		700;
 	background-color:	#f06542;
 	color:				white;
@@ -86,7 +98,13 @@ a {
 }
 .price-goods {
 	font-size: 			45px;
-	line-height: 		45px;
+	line-height: 		1;
+	font-weight: 		700;
+	color:				white;
+}
+.price-goods span {
+	font-size: 			30px;
+	line-height: 		1.5;
 	font-weight: 		700;
 	color:				white;
 }
@@ -94,14 +112,15 @@ a {
 	background-color:	#e84d37;
 	color:				white;
 }
-
-
+.price img {
+	border-radius:		50%;
+}
 .features-block {
-	background-color:	#ede3ca; /*временно так..*/
+	background-color:	#ede3ca;
 }
 .features-block p:first-child {
 	font-size: 			24px;
-	line-height: 		30px;
+	line-height: 		1.25;
 	font-weight: 		500;
 	color:				#323232;
 }
@@ -109,55 +128,54 @@ a {
 	margin:				0;
 	padding:			0;
 	font-size: 			16px;
-	line-height: 		22px;
+	line-height: 		1.375;
 	font-weight: 		500;
 	color:				#323232;
 	list-style:			none;
 }
 .blog p {
 	font-size: 			16px;
-	line-height: 		22px;
+	line-height: 		1.375;
 	font-weight: 		500;
 	color:				#323232;
 }
 .blog a {
 	font-size: 			24px;
-	line-height: 		30px;
+	line-height: 		1.25;
 	font-weight: 		700;
 	color:				#323232;
 	text-decoration: 	underline;
 }
 .subscribe p {
 	font-size: 			16px;
-	line-height: 		22px;
+	line-height: 		1.375;
 	font-weight: 		400;
 	color:				#5a5a5a;
 }
 .subscribe button {
 	font-size: 			18px;
-	line-height: 		24px;
+	line-height: 		1.333;
 	font-weight: 		700;
 	background-color:	#f06441;
 	color:				white;
 	border:				0;
 }
 .footer-social ul,
-.footer-info ul   {
+.footer-info ul {
 	margin:				0;
 	padding:			0;
 	list-style:			none;
 }
 .footer-info a {
 	font-size: 			13px;
-	line-height: 		18px;
+	line-height: 		1.384;
 	font-weight: 		700;
 	color:				white;
 }
 .copyright,
 .copyright a {
 	font-size: 			12px;
-	line-height: 		18px;
+	line-height: 		1.5;
 	font-weight: 		400;
 	color:				white;
 }
-
