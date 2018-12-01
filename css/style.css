@@ -47,7 +47,7 @@ a {
 }
 .user-block .phone { 
 	font-size: 		22px;
-	line-height: 	1.090;
+	line-height: 	1.09; 
 	font-weight: 	700;
 }
 .breadcrumbs {
@@ -63,13 +63,13 @@ a {
 	color:			white;
 }
 .login a {
-	background: 	url(../img/entrance.svg) no-repeat;
+	background: 	url("../img/entrance.svg") no-repeat;
 }
 .basket a:first-child { 
 	font-size:			14px;
 	line-height:		1.142;
 	font-weight:		500;
-	background: 		url(../img/basket_red.svg) no-repeat;
+	background: 		url("../img/basket_red.svg") no-repeat;
 	background-color:	white;
 	color:				#323232;
 }
