@@ -179,3 +179,86 @@ a {
 	font-weight: 		400;
 	color:				white;
 }
+
+
+
+	/*  сетки  */
+
+html,
+body {
+	width:			1200px;
+}
+.main-header {
+	display: 		flex;
+}
+.container {
+	width:	 		1150px;
+	margin: 		0 auto;
+}
+
+.logo {
+	width:				160px;
+								background-color: rgba(173, 81, 81, 0.3);
+}						/* подсветка временно, если все верно, сразу уберу! */
+.main-menu {
+	width:				400px;
+								background-color: rgba(173, 115, 81, 0.3);
+}
+.user-block {
+	width:				270px;
+	margin-left:		auto;
+								background-color: rgba(173, 145, 81, 0.3);
+} 
+.features-block	{
+	display:			flex;
+	margin-bottom:		40px;
+}	
+
+.user-blog {
+	display:			flex;
+	justify-content:	space-between;
+	margin-bottom:		40px;
+}
+.blog {
+	width:				560px;
+}
+.subscribe {
+	width:				560px;
+}	
+
+.breadcrumbs {
+	display:			flex;
+}
+
+.price {
+	display:			flex;
+	flex-wrap:			wrap;
+	justify-content: 	space-between;
+}
+ 
+.price article {
+	width:				267px;
+	text-align: 		center;
+								background-color: rgba(173, 200, 81, 0.3);
+}								
+	
+footer {
+	display:			flex;
+	margin-top:			10px;
+}
+ 
+.footer-social {
+	width:				265px;
+	margin-right:		130px;
+								background-color: rgba(173, 81, 81, 0.3);
+}
+.footer-info {
+	width:				400px;
+	margin-right:		150px;
+								background-color: rgba(173, 115, 81, 0.3);
+}
+.footer-logo {
+	width:				265px;
+								background-color: rgba(173, 145, 81, 0.3);
+}
+
