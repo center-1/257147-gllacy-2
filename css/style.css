@@ -184,16 +184,21 @@ a {
 
 	/*  сетки  */
 
-html,
-body {
-	width:			1200px;
+html {
+  box-sizing: border-box;
 }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 .main-header {
 	display: 		flex;
 }
 .container {
-	width:	 		1150px;
+	width:	 		1200px;
 	margin: 		0 auto;
+	padding:		0 27px;
 }
 
 .logo {
@@ -204,6 +209,8 @@ body {
 	width:				400px;
 								background-color: rgba(173, 115, 81, 0.3);
 }
+
+
 .user-block {
 	width:				270px;
 	margin-left:		auto;
