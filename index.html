@@ -33,24 +33,28 @@
 				</ul>	
 			</nav>
 			<div class="user-block">
-				<form  action="?" method="get" class="visually-hidden">
-					<input type="text" name="search" placeholder="Что ищем?">
-				</form>
-				<a class="login" href="#">
-					Вход 
-				</a>
-				<form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
-					<input type="email" name="email" placeholder="Электронная почта">
-					<input type="password" name="password" placeholder="Пароль">
-					<input type="submit" value="Войти" name="autorization">
-					<a href="#"> Забыли пароль? </a>
-					<a href="#"> Новая регистрация </a>
-				</form>
-				<a class="login" href="#"> 
-					Пусто
-				</a>
-				<p> C 10 до 20, ежедневно </p>
-				<p><a href="tel:8812450-25-25" class="phone"> 8 812 450-25-25 </a></p>
+				<div class="user-authorization">
+					<form  action="?" method="get" class="visually-hidden">
+						<input type="text" name="search" placeholder="Что ищем?">
+					</form>
+					<a class="login" href="#">
+						Вход 
+					</a>
+					<form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
+						<input type="email" name="email" placeholder="Электронная почта">
+						<input type="password" name="password" placeholder="Пароль">
+						<input type="submit" value="Войти" name="autorization">
+						<a href="#"> Забыли пароль? </a>
+						<a href="#"> Новая регистрация </a>
+					</form>
+					<a class="login" href="#"> 
+						Пусто
+					</a>
+				</div>
+				<div class="user-info">
+					<p> C 10 до 20, ежедневно </p>
+					<p><a href="tel:8812450-25-25" class="phone"> 8 812 450-25-25 </a></p>
+				</div>
 			</div>
 		</header>
 
@@ -145,11 +149,15 @@
 				<div class="features-block container">
 					<p> Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес </p>
 					<ul>
+					<div class="part">
 						<li> Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий. </li>
 						<li> Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество. </li>
+					</div>
+					<div class="part">
 						<li> Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
 						<li> Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
 						который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус. </li>
+					</div>	
 					</ul>
 				</div>
 
@@ -209,7 +217,7 @@
 				</ul>
 			</div>
 			<div class="footer-info">
-				<ul>
+				<ul class="info-part">
 					<li>
 						<a href="#"> Для поставщиков </a>
 					</li>
