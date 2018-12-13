@@ -10,18 +10,27 @@ img {
 	max-width: 			100%;
 	height: 			auto;
 }
+
+
+.main-menu  { 
+    position: relative; 
+}
+
+
+
 .main-menu ul {
 	margin:				0;
 	padding: 			0;
 	list-style:			none;
 }
 .main-menu a {
-	display:			block;
-	vertical-align:		baseline;
-	
-	list-style:	#adc4b7;			/* hover */
-	padding:			7px 11px;
+	display:				block;
+/* 	vertical-align:			baseline; */
+ 	padding:				7px 11px;
+	text-decoration:		underline;
+	text-decoration-color:	#adbdb4;	
 }
+
 
 
 .main-menu a,
@@ -31,6 +40,20 @@ img {
 	font-weight: 		700;
 	color:				white;	
 }
+.main-menu li:hover {
+	background-color:	white;
+	border-radius:		20px;
+}
+.main-menu li:hover a {
+	color:				black;
+	text-decoration:	none;
+}
+.main-menu li:active {
+	box-shadow: 		inset 0 0 5 #696969;
+}
+
+
+
 .sub-menu a:hover {
 	background-color: 	#fbded7;
 }
@@ -47,12 +70,110 @@ img {
 	clip: 			rect(0 0 0 0);
 	overflow: 		hidden;
 }
-.user-block a {
-	font-size: 		14px;
-	line-height: 	1.142;
-	font-weight: 	500;
-	color:			white;		
+
+
+
+
+.sub-menu {
+	flex-direction: 	column;
+	position: 			absolute;
+	top:				37px;
+	left:				0px;
+	background-color:	#f8f7f4;
+	box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
+	border-radius:		5px;
+	font-weight:		400;
 }
+.sub-menu:first-child a {
+	font-weight:		  700;
+}
+.sub-menu a {
+	display:			block;
+	color:				#323232;
+ 	padding:			7px 18px;
+	text-decoration:	none;
+}
+.sub-new {
+	border-bottom:		solid 1px #d1d0ce;
+}
+.sub-menu a:hover {
+	background-color:	#fbded7;
+}
+.sub-menu a:active {
+	background-color:	#f6b5a5;
+}
+
+
+
+
+
+/* .sub-menu:first-child a {
+	padding-top:		  9px;
+	padding-bottom:		10px;
+	border-bottom:		1px solid #d1d0ce;
+	font-weight:		  700;
+} */
+
+
+
+/* .main-menu li:hover .sub-menu {
+  display: block;
+} */
+/* .sub-menu {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  border-radius: none;
+  background-color: lightblue;
+} */
+
+
+.user-block .login {
+	margin-right:		10px;
+}
+.user-block .login,
+.user-block .user-basket {
+	display:				inline-block;
+	vertical-align:			baseline;
+ 	padding:				7px 11px;
+	font-size: 				14px;
+	line-height: 			1.142;
+	font-weight: 			500;
+	background-color: 		#9db1a5;
+	border-radius:			20px;
+	color:					white;		
+}
+.user-block .login,
+.user-block .user-basket {
+	position: 			relative;
+	padding-left:		33px;
+}
+.login::before {
+	content: 				"";
+	position:				absolute;
+	top:			 		5px;
+	left:					8px;  
+	width:					21px;
+	height: 				20px;
+	background-image: 		url("../img/entrance.svg");
+	background-repeat: 		no-repeat;
+	background-position: 	0 0;  
+	fill: 					white; /*не работает*/
+}
+
+.user-basket::before {
+	content: 				"";
+	position:				absolute;
+	top:			 		5px;
+	left:					8px;  
+	width:					21px;
+	height: 				20px;
+	background-image: 		url("../img/basket.svg");
+	background-repeat: 		no-repeat;
+	background-position: 	0 0;  
+}
+
+
 .user-block p {
 	font-size: 		14px;
 	line-height: 	1.142;
@@ -210,27 +331,24 @@ html {
 	align-items: 	center;
 }
 .container {
-	width:	 		1200px; /* 1146px */
+	width:	 		1200px;
 	margin: 		0 auto;
 	padding:		0 27px;
 }
 
 .logo {
 	width:				160px;
-								background-color: rgba(173, 81, 81, 0.3);
+/* 								background-color: rgba(173, 81, 81, 0.3); */
 }						/* подсветка временно, если все верно, сразу уберу! */
 .main-menu ul {
 	display: 			flex;
 	justify-content: 	space-around;
-								background-color: rgba(173, 115, 81, 0.3);
-}
-.main-menu li {
-	margin: 			0 20px;
+/* 								background-color: rgba(173, 115, 81, 0.3); */
 }
 .user-block {
 	width:				270px;
 	margin-left:		auto;
-								background-color: rgba(173, 145, 81, 0.3);
+/* 								background-color: rgba(173, 145, 81, 0.3); */
 } 
 .features-block	{
 	margin-bottom:		40px;
