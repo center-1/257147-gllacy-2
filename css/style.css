@@ -10,8 +10,6 @@ img {
 	max-width: 			100%;
 	height: 			auto;
 }
-
-
 .main-menu  { 
     position: relative; 
 }
@@ -38,13 +36,13 @@ img {
 	font-size: 			16px;
 	line-height: 		1.125;
 	font-weight: 		700;
-	color:				white;	
+	color:				white;
 }
 .main-menu li:hover {
 	background-color:	white;
 	border-radius:		20px;
 }
-.main-menu li:hover a {
+.main-menu li:hover a {	 /*вложенность три.. классы на li? nth-child?*/
 	color:				black;
 	text-decoration:	none;
 }
@@ -78,19 +76,30 @@ img {
 	flex-direction: 	column;
 	position: 			absolute;
 	top:				37px;
-	left:				0px;
+	left:				-10px;
 	background-color:	#f8f7f4;
 	box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
 	border-radius:		5px;
+}
+
+
+.sub-menu .sub-new {
+	font-size:			14px;
+	line-height:		1.142;
+	font-weight:		700;
+}
+.sub-menu a {
+	font-size:			14px;
+	line-height:		1.142;
 	font-weight:		400;
 }
-.sub-menu:first-child a {
-	font-weight:		  700;
-}
+
+
+
 .sub-menu a {
 	display:			block;
 	color:				#323232;
- 	padding:			7px 18px;
+ 	padding:			8px 21px;
 	text-decoration:	none;
 }
 .sub-new {
@@ -104,30 +113,53 @@ img {
 }
 
 
+	/* форма  ВХОДА */
+
+.modal {
+	position:			absolute;
+	background-color:	#f8f7f4;
+	box-shadow: 		0 30px 50px rgba(0, 0, 0, 0.7);
+}
+.modal-login {	
+	top: 			120px;
+	left: 			40%;
+	width: 			278px;
+
+	margin-left: 	230px;
+	padding: 		20px 18px;
+}
+
+.login-form {
+	border-radius:	25px;  /*не работает*/
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+	box-sizing: 		border-box;
+	wi1dth: 				278px;
+	padding: 			10px 15px;
+	padding-right:		40px;
+	border-radius:		5px;
+}
+.login-form input:hover {
+	border-color: 		#9a9a9a;
+}
+.login-form input:focus {
+	border-color: 		#2e88e4;
+}
+.login-form a:hover,
+.login-form a:focus {
+	color:				#e84d37;
+}
 
 
+/* .modal-login   278px */
 
-/* .sub-menu:first-child a {
-	padding-top:		  9px;
-	padding-bottom:		10px;
-	border-bottom:		1px solid #d1d0ce;
-	font-weight:		  700;
-} */
+	/*  конец  */
 
 
-
-/* .main-menu li:hover .sub-menu {
-  display: block;
-} */
-/* .sub-menu {
-  position: absolute;
-  top: 37px;
-  left: 0;
-  border-radius: none;
-  background-color: lightblue;
-} */
-
-
+	
+	
 .user-block .login {
 	margin-right:		10px;
 }
@@ -354,12 +386,12 @@ html {
 	margin-bottom:		40px;
 }
 .features-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+	display:			flex;
+	justify-content: 	space-between;
+	flex-wrap: 			wrap;
 }
 .features-list li {
-  width: 49%;
+	width: 49%;
 }
 .user-blog {
 	display:			flex;
