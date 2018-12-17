@@ -16,7 +16,7 @@
 				<ul>
 					<li>
 						<a href="#"> Каталог </a>
-						<ul class="sub-menu visually-hid55555den">
+						<ul class="sub-menu visually-hidden123">
 							<li><a class="sub-new" href="#"> Новинки </a></li>
 							<li><a href="catalog.html"> Сливочное </a></li>
 							<li><a href="#"> Щербеты </a></li>
@@ -34,19 +34,29 @@
 			</nav>
 			<div class="user-block">
 				<div class="user-authorization">
-					<form  action="?" method="get" class="visually-hidden">
+					<form action="?" method="get" class="visually-hidden123">
 						<input type="text" name="search" placeholder="Что ищем?">
 					</form>
 					<a class="login" href="#">
 						Вход 
 					</a>
-					<form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
-						<input type="email" name="email" placeholder="Электронная почта">
-						<input type="password" name="password" placeholder="Пароль">
-						<input type="submit" value="Войти" name="autorization">
-						<a href="#"> Забыли пароль? </a>
-						<a href="#"> Новая регистрация </a>
-					</form>
+					<section class="modal">
+						<form action="https://echo.htmlacademy.ru" method="post" class="modal-login visually-hidden123">
+							<p>
+								<label for="email" class="visually-hidden">Электронная почта</label>
+								<input id="email" type="email" name="email" placeholder="Электронная почта">
+							</p>
+							<p>
+								<label for="password" class="visually-hidden">Пароль</label>
+								<input id="password" type="password" name="password" placeholder="Пароль">
+							</p>
+								<input type="submit" value="Войти" name="autorization">
+								<!-- <button class="button" type="submit">Войти</button> -->
+								
+							<a href="#"> Забыли пароль? </a>
+							<a href="#"> Новая регистрация </a>
+						</form>
+					</section>
 					<a class="user-basket" href="#"> 
 						Пусто
 					</a>
@@ -176,13 +186,15 @@
 				
 				<div class="map">
 					<img src="img/map.jpg" width="1200" height="430" alt="Карта, расположения магазина">
-					<form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
+					<form action="https://echo.htmlacademy.ru" method="post" class="map-modal visually-hidden123">
 						Мы обязательно вам ответим!
 						<input type="text" name="name" placeholder="Как вас зовут?">
 						<input type="email" name="email" placeholder="Ваша почта для ответа?">
-						<textarea id="comment-field" name="comment" rows="10" cols="40" placeholder="Напишите что-нибудь..."></textarea> 
-						<input type="submit" name="feedback" value="Отправить">
-						<input type="button" name="close" value="Закрыть">
+						<textarea id="comment-field" name="comment" rows="5" cols="45" placeholder="Напишите что-нибудь..."></textarea> 
+						<input type="submit" name="feedback" value="Отправить">	
+						<button class="map-close" type="button">Закрыть</button>
+						
+						<!-- <input type="button" name="map-close" value="Закрыть"> -->
 					</form>	
 				</div>
 		</main> 
@@ -238,30 +250,5 @@
 				</p>
 			</div>
 		</footer>
-
-
-				<div class="user-authorization22">
-					<section class="modal modal-login">
-						<form action="https://echo.htmlacademy.ru" method="post" class="login-form visually-hid123den">
-							<p>
-								<label for="email" class="visually-hidden">Электронная почта</label>
-								<input id="email" type="email" name="email" placeholder="Электронная почта">
-							</p>
-							<p>
-								<label for="password" class="visually-hidden">Пароль</label>
-								<input id="password" type="password" name="password" placeholder="Пароль">
-							</p>
-								<input type="submit" value="Войти" name="autorization">
-								<!-- <button class="button" type="submit">Войти</button> -->
-								
-							<a href="#"> Забыли пароль? </a>
-							<a href="#"> Новая регистрация </a>
-						</form>
-					</section>
-				</div>
-				
-			<br><br><br>
-		
-		
 	</body>
 </html>
