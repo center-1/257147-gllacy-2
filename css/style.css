@@ -4,6 +4,14 @@ html {
 *, *::before, *::after {
 	box-sizing: 		inherit;
 }
+::before {
+	content: 		"";
+	position:		absolute;
+}
+.reset-list {
+	margin:			0;
+	padding:		0;
+}
 body {
 	background-color: 		#849d8f;
 	font-family: 			Roboto, Arial, sans-serif;
@@ -34,8 +42,6 @@ img {
 .main-menu ul {
 	display: 			flex;
 	justify-content: 	space-around;
-	margin:				0;
-	padding: 			0;
 	list-style:			none;
 }
 .main-menu a {
@@ -57,7 +63,7 @@ img {
 	background-color:	white;
 	border-radius:		20px;
 }
-.main-menu li:hover a,  /*вложенность три.. классы на li? nth-child?*/
+.main-item:hover a,
 .user-authorization .user-basket:hover,
 .user-authorization .login:hover {
 	color:				black;
@@ -82,6 +88,7 @@ img {
 	clip: 			rect(0 0 0 0);
 	overflow: 		hidden;
 }
+
 .sub-menu {
 	flex-direction: 	column;
 	position: 			absolute;
@@ -92,19 +99,15 @@ img {
 	border-radius:		5px;
 }
 .sub-menu .sub-new {
-	font-size:			14px;
-	line-height:		1.142;
 	font-weight:		700;
-}
-.sub-menu a {
-	font-size:			14px;
-	line-height:		1.142;
-	font-weight:		400;
 }
 .sub-menu a {
 	display:			block;
 	color:				#323232;
  	padding:			8px 21px;
+	font-size:			14px;
+	line-height:		1.142;
+	font-weight:		400;
 	text-decoration:	none;
 }
 .sub-new {
@@ -126,7 +129,7 @@ img {
 .user-authorization > form {
 	position:			absolute;
 	top: 				120px;
-	left: 				40%;
+	left: 				650px;
 	width: 				341px;
 	height:				84px;
 	border-radius:		5px;
@@ -147,10 +150,9 @@ img {
 	background-color:	#f8f7f4;
 	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 	top: 				120px;
-	left: 				50%;
+	left: 				850px;
 	width: 				277px;
 	height: 			214px;
-	margin-left: 		230px;
 	padding: 			20px 18px;	/*в макет не попадаю*/
 	border-radius:		5px;
 }
@@ -158,30 +160,28 @@ img {
 .modal-login input[type="password"] {
 	width: 				241px;
 	height: 			44px;
-	padding: 			10px 15px;
+	padding: 			10px 40px 10px 15px; /*изменил, разницы не вижу*/ /* 10 40 10 15px */
 	padding-right:		40px;
 	border: 			1px solid #d3d3d2;
 	background-color: 	#ffffff;
 	border-radius:		5px;	
 }
 .modal input[type="submit"] {
-	min-width: 			100px;
-	height: 			44px;
+	min-width:			100px;
+	height:				44px;
 	margin-right:		20px;
 	border:				0;
 	border-radius:		20px;
-	box-shadow: 		0 1px 2px #ac1000;
-	background-color: 	#e84d37;
-	background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%);
-	color: 				#fefefe;
-	font-family: 		Roboto;
-	font-size: 			18px;
-	font-weight: 		700;
-	line-height: 		1.333;
+	box-shadow:			0 1px 2px #ac1000;
+	background-color:	#e84d37;
+	background-image:	linear-gradient(to top, #e74a35, #f26843);
+	color:				#fefefe;
+	font-size:			18px;
+	font-weight:		700;
+	line-height:		1.333;
 }
 .modal a {
 	color: 					#323232;
-	font-family: 			Roboto;
 	font-size: 				13px;
 	font-weight: 			400;
 	line-height: 			1.846;
@@ -225,28 +225,21 @@ img {
 	position: 				relative;
 	padding-left:			33px;
 }
-.login::before {
-	content: 				"";
-	position:				absolute;
+.login::before,
+.user-basket::before {
 	top:			 		5px;
 	left:					8px;  
 	width:					21px;
 	height: 				20px;
-	background-image: 		url("../img/entrance.svg");
 	background-repeat: 		no-repeat;
-	background-position: 	0 0;  
+	background-position: 	0 0;
+}
+.login::before {
+	background-image: 		url("../img/entrance.svg");
 	fill: 					white; /*не работает*/
 }
 .user-basket::before {
-	content: 				"";
-	position:				absolute;
-	top:			 		5px;
-	left:					8px;  
-	width:					21px;
-	height: 				20px;
 	background-image: 		url("../img/basket.svg");
-	background-repeat: 		no-repeat;
-	background-position: 	0 0;  
 }
 .user-block p {
 	font-size: 		14px;
@@ -259,8 +252,6 @@ img {
 	font-weight: 	700;
 }
 .breadcrumbs {
-	margin:			0;
-	padding:		0;
 	list-style:		none;
 }
 .breadcrumbs a,
@@ -337,7 +328,7 @@ img {
 .features-block	{
 	padding-top:		20px;
 	margin-bottom:		40px;
-	background:			url("../img/features_bg.jpg") #f1e5cb;
+	background:			#f1e5cb url("../img/features_bg.jpg");
 	border-radius:		15px;
 }
 .features-block p:first-child {
@@ -347,8 +338,6 @@ img {
 	color:				#323232;
 }
 .features-block ul {
-	margin:				0;
-	padding:			0;
 	font-size: 			16px;
 	line-height: 		1.375;
 	font-weight: 		500;
@@ -369,12 +358,8 @@ img {
 .features-list li:last-child {
 	padding-bottom:		0;
 }
-.features-list li:nth-child(1):before,
-.features-list li:nth-child(2):before,
-.features-list li:nth-child(3):before,
-.features-list li:nth-child(4):before {
-	content: 				"";
-	position:				absolute;
+
+.features-list li::before {
 	top:			 		0px;
 	left:					0px;  
 	width:					33px;
@@ -466,7 +451,6 @@ img {
 	background-color: 	#f8f7f4;
 	border-radius:		10px;
 	color:				#323232;
-	font-family: 		Roboto;
 	font-size: 			24px;
 	font-weight: 		500;
 	line-height: 		1.166;
@@ -484,7 +468,6 @@ img {
 	padding:			16px 15px;
 	background-color: 	#ffffff;
 	color: 				#999999;
-	font-family:		Roboto;
 	font-size: 			16px;
 	font-weight: 		400;
 	line-height: 		1.5;
@@ -492,7 +475,6 @@ img {
 .map-modal textarea {
 	margin-bottom:		25px;
 	color: 				#999999;
-	font-family:		Roboto;
 	font-size: 			16px;
 	font-weight: 		400;
 	line-height: 		1.5;
@@ -509,7 +491,6 @@ img {
 	background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%);
 	border:				0;
 	border-radius:		20px;
-	font-family: 		Roboto;
 	font-size: 			18px;
 	font-weight: 		700;
 	line-height: 		1.333;
@@ -527,8 +508,6 @@ img {
 }
 .map-close::before,
 .map-close::after {
-	content: 			"";
-	position: 			absolute;
 	top: 				16px;
 	left:				0px;
 	width: 				18px;
@@ -557,8 +536,6 @@ footer {
 }
 .footer-social ul,
 .footer-info ul {
-	margin:				0;
-	padding:			0;
 	list-style:			none;
 }
 .footer-social img {
@@ -587,8 +564,6 @@ footer {
 	text-decoration-color:	#adbdb4;	
 }
 .info-part li:first-child::before {
-	content: 				"";
-	position:				absolute;
 	top:			 		5px;
 	left:					0px;  
 	width:					10px;
