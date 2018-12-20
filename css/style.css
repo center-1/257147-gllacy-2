@@ -4,7 +4,12 @@ html {
 *, *::before, *::after {
 	box-sizing: 		inherit;
 }
-::before {
+.login::before,
+.user-basket::before,
+.features-list li::before,
+.map-close::before,
+.info-part li:first-child::before,
+a.sub-new::after {
 	content: 		"";
 	position:		absolute;
 }
@@ -58,14 +63,14 @@ img {
 	color:				white;
 }
 .main-menu li:hover,
-.user-authorization .user-basket:hover,
-.user-authorization .login:hover {
+.user-data .user-basket:hover, /*user-data*/
+.user-data .login:hover {  /*user-data*/
 	background-color:	white;
 	border-radius:		20px;
 }
 .main-item:hover a,
-.user-authorization .user-basket:hover,
-.user-authorization .login:hover {
+.user-data .user-basket:hover,  /*user-data*/
+.user-data .login:hover {  /*user-data*/
 	color:				black;
 	text-decoration:	none;
 }
@@ -101,6 +106,12 @@ img {
 .sub-menu .sub-new {
 	font-weight:		700;
 }
+a.sub-new::after {
+    left: 				6px;
+    right: 				9px;
+    top: 				30px;
+    border-bottom: 		solid 1px #d1d0ce;
+}
 .sub-menu a {
 	display:			block;
 	color:				#323232;
@@ -110,9 +121,6 @@ img {
 	font-weight:		400;
 	text-decoration:	none;
 }
-.sub-new {
-	border-bottom:		solid 1px #d1d0ce;
-}
 .sub-menu a:hover {
 	background-color:	#fbded7;
 }
@@ -120,13 +128,37 @@ img {
 	background-color:	#f6b5a5;
 }
 .user-block {
+	position:			relative;	/* !!! */
 	width:				270px;
 	margin-left:		auto;
 }
 .breadcrumbs {
 	display:			flex;
 }
-.user-authorization > form {
+
+/*-----------------------------------*/
+.user-data a:first-child:after {
+content: "";
+position: absolute;	
+
+	top:			 		5px;
+	left:					-40px;  
+	width:					21px;
+	height: 				20px;
+	background-repeat: 		no-repeat;
+	/* background-position: 	0 0; */
+	background-image: 		url("../img/loupe.svg");
+	b1ackground-color:		white;
+	/* border-radius:			50%; */
+	padding:				15px;
+	
+}
+
+
+
+
+
+.user-data > form {  /*user-data  $ user-authorization */
 	position:			absolute;
 	top: 				120px;
 	left: 				650px;
@@ -137,7 +169,7 @@ img {
 	padding:			20px 15px;
 	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 }
-.user-authorization input[type="text"] {
+.user-data input[type="text"] {  /*user-data*/
 	width: 				311px;
 	height: 			44px;
 	border: 			1px solid rgba(178, 178, 178, 0.52);
@@ -188,7 +220,7 @@ img {
 	text-decoration:		underline;
 	text-decoration-color:	#aeadab;
 }
-.user-authorization input[type="text"]:hover,
+.user-data input[type="text"]:hover, /*user-data*/
 .modal-login input:hover,
 .map-modal input[type="text"]:hover,
 .map-modal input[type="email"]:hover, 
@@ -196,7 +228,7 @@ img {
 .subscribe input[type="email"]:hover {
 	border: 			2px solid rgba(154, 154, 154, 0.52); 
 }
-.user-authorization input[type="text"]:focus,
+.user-data input[type="text"]:focus,  /*user-data*/
 .modal-login input:focus,
 .map-modal input[type="text"]:focus,
 .map-modal input[type="email"]:focus, 
