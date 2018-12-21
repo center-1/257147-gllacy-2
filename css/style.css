@@ -4,8 +4,9 @@ html {
 *, *::before, *::after {
 	box-sizing: 		inherit;
 }
+.user-data a:first-child:after,
 .login::before,
-.user-basket::before,
+/* .user-basket::before, */
 .features-list li::before,
 .map-close::before,
 .info-part li:first-child::before,
@@ -63,14 +64,14 @@ img {
 	color:				white;
 }
 .main-menu li:hover,
-.user-data .user-basket:hover, /*user-data*/
-.user-data .login:hover {  /*user-data*/
+.user-data .user-basket:hover,
+.user-data .login:hover {
 	background-color:	white;
 	border-radius:		20px;
 }
 .main-item:hover a,
-.user-data .user-basket:hover,  /*user-data*/
-.user-data .login:hover {  /*user-data*/
+.user-data .user-basket:hover,
+.user-data .login:hover {
 	color:				black;
 	text-decoration:	none;
 }
@@ -128,7 +129,7 @@ a.sub-new::after {
 	background-color:	#f6b5a5;
 }
 .user-block {
-	position:			relative;	/* !!! */
+	position:			relative;
 	width:				270px;
 	margin-left:		auto;
 }
@@ -137,31 +138,27 @@ a.sub-new::after {
 }
 
 /*-----------------------------------*/
+.user-data a:first-child {
+	padding:				5px 15px;
+	border-radius:			50%;
+	background-color: 		#9db1a5;
+	margin-right:			10px;
+}
 .user-data a:first-child:after {
-content: "";
-position: absolute;	
-
 	top:			 		5px;
-	left:					-40px;  
+	left:					7px;  
 	width:					21px;
 	height: 				20px;
 	background-repeat: 		no-repeat;
-	/* background-position: 	0 0; */
 	background-image: 		url("../img/loupe.svg");
-	b1ackground-color:		white;
-	/* border-radius:			50%; */
-	padding:				15px;
-	
 }
-
-
 
 
 
 .user-data > form {  /*user-data  $ user-authorization */
 	position:			absolute;
 	top: 				120px;
-	left: 				650px;
+	left: 				-400px;
 	width: 				341px;
 	height:				84px;
 	border-radius:		5px;
@@ -169,7 +166,7 @@ position: absolute;
 	padding:			20px 15px;
 	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 }
-.user-data input[type="text"] {  /*user-data*/
+.user-data input[type="text"] {
 	width: 				311px;
 	height: 			44px;
 	border: 			1px solid rgba(178, 178, 178, 0.52);
@@ -182,7 +179,7 @@ position: absolute;
 	background-color:	#f8f7f4;
 	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 	top: 				120px;
-	left: 				850px;
+	right: 				200px;
 	width: 				277px;
 	height: 			214px;
 	padding: 			20px 18px;	/*в макет не попадаю*/
@@ -220,7 +217,7 @@ position: absolute;
 	text-decoration:		underline;
 	text-decoration-color:	#aeadab;
 }
-.user-data input[type="text"]:hover, /*user-data*/
+.user-data input[type="text"]:hover,
 .modal-login input:hover,
 .map-modal input[type="text"]:hover,
 .map-modal input[type="email"]:hover, 
@@ -228,7 +225,7 @@ position: absolute;
 .subscribe input[type="email"]:hover {
 	border: 			2px solid rgba(154, 154, 154, 0.52); 
 }
-.user-data input[type="text"]:focus,  /*user-data*/
+.user-data input[type="text"]:focus,
 .modal-login input:focus,
 .map-modal input[type="text"]:focus,
 .map-modal input[type="email"]:focus, 
@@ -252,13 +249,13 @@ position: absolute;
 	border-radius:			20px;
 	color:					white;		
 }
-.user-block .login,
-.user-block .user-basket {
+.user-block .login
+/* .user-block .user-basket { */  {
 	position: 				relative;
 	padding-left:			33px;
 }
-.login::before,
-.user-basket::before {
+.login::before
+/* .user-basket::before*/ {
 	top:			 		5px;
 	left:					8px;  
 	width:					21px;
@@ -268,11 +265,27 @@ position: absolute;
 }
 .login::before {
 	background-image: 		url("../img/entrance.svg");
-	fill: 					white; /*не работает*/
+	fill: 					white;
 }
-.user-basket::before {
-	background-image: 		url("../img/basket.svg");
+
+
+
+.user-basket .svg-basket {
+	fill:			yellow;
 }
+
+.user-basket:hover .svg1 {
+	fill:			red;
+}
+.u1ser-block .user-basket svg {
+	padding-top: 2px;
+}	
+	
+/* .user-basket::before { */
+	/* background-image: 		url("../img/basket.svg"); */
+/* } */
+
+
 .user-block p {
 	font-size: 		14px;
 	line-height: 	1.142;
