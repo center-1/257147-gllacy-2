@@ -138,7 +138,7 @@ a.sub-new::after {
 }
 
 /*-----------------------------------*/
-.user-data a:first-child {
+.user-data > a:first-child {
 	padding:				5px 15px;
 	border-radius:			50%;
 	background-color: 		#9db1a5;
@@ -217,6 +217,14 @@ a.sub-new::after {
 	text-decoration:		underline;
 	text-decoration-color:	#aeadab;
 }
+
+/*-------------------------------------------*/
+.modal-autorization {
+	display: flex;
+}
+
+
+
 .user-data input[type="text"]:hover,
 .modal-login input:hover,
 .map-modal input[type="text"]:hover,
