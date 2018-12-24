@@ -415,8 +415,8 @@ a.sub-new::after {
 .features-list li::before {
 	top:			 		0px;
 	left:					0px;  
-	width:					33px;
-	height: 				33px;
+	width:					49px;
+	height: 				49px;
 }
 .features-list li:nth-child(1):before {
 	background: 			url("../img/ice_cream.svg") no-repeat;
@@ -619,14 +619,15 @@ footer {
 .info-part li:first-child::before {
 	top:			 		5px;
 	left:					0px;  
-	width:					10px;
-	height: 				9px;
+	width:					16px;
+	height: 				13px;
 	background-image: 		url("../img/heart.svg");
 	background-repeat: 		no-repeat;
 	background-position: 	0 0;
 }
 .info-part li:nth-child(1),
 .info-part li:nth-child(3) {
+	padding-left:		6px;
 	width:				50%;
 }
 .info-part li:nth-child(2),
