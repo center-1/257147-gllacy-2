@@ -4,9 +4,6 @@ html {
 *, *::before, *::after {
 	box-sizing: 		inherit;
 }
-.user-data a:first-child:after,
-.login::before,
-/* .user-basket::before, */
 .features-list li::before,
 .map-close::before,
 .info-part li:first-child::before,
@@ -53,8 +50,6 @@ img {
 .main-menu a {
 	display:				block;
  	padding:				7px 11px;
-	text-decoration:		underline;
-	text-decoration-color:	#adbdb4;	
 }
 .main-menu a,
 .main-menu li:first-child {
@@ -63,11 +58,34 @@ img {
 	font-weight: 		700;
 	color:				white;
 }
-.main-menu li:hover,
-.user-data .user-basket:hover,
-.user-data .login:hover {
+.main-menu a::after {
+	content:			"";
+	position:			absolute;
+	left:				0;
+	right:				0;
+	height:				1px;
+	background-color:	rgba(255,255,255,0.2);
+}
+.main-menu li:hover {
 	background-color:	white;
 	border-radius:		20px;
+}
+.user-data .search-site:hover,
+.user-data .login:hover,
+.user-data .user-basket:hover {
+	background-color:	white;
+}
+.login svg {
+	fill:		white;
+}
+.search-site svg,
+.user-basket svg {
+	fill:		#fff;
+}
+.search-site:hover svg,
+.login:hover svg,
+.user-basket:hover svg {
+	fill: 		#323232;
 }
 .main-item:hover a,
 .user-data .user-basket:hover,
@@ -94,7 +112,6 @@ img {
 	clip: 			rect(0 0 0 0);
 	overflow: 		hidden;
 }
-
 .sub-menu {
 	flex-direction: 	column;
 	position: 			absolute;
@@ -136,26 +153,7 @@ a.sub-new::after {
 .breadcrumbs {
 	display:			flex;
 }
-
-/*-----------------------------------*/
-.user-data > a:first-child {
-	padding:				5px 15px;
-	border-radius:			50%;
-	background-color: 		#9db1a5;
-	margin-right:			10px;
-}
-.user-data a:first-child:after {
-	top:			 		5px;
-	left:					7px;  
-	width:					21px;
-	height: 				20px;
-	background-repeat: 		no-repeat;
-	background-image: 		url("../img/loupe.svg");
-}
-
-
-
-.user-data > form {  /*user-data  $ user-authorization */
+.user-data > form {
 	position:			absolute;
 	top: 				120px;
 	left: 				-400px;
@@ -218,12 +216,9 @@ a.sub-new::after {
 	text-decoration-color:	#aeadab;
 }
 
-/*-------------------------------------------*/
 .modal-autorization {
 	display: flex;
 }
-
-
 
 .user-data input[type="text"]:hover,
 .modal-login input:hover,
@@ -241,7 +236,13 @@ a.sub-new::after {
 .subscribe input[type="email"]:focus {
 	border: 			2px solid rgba(46, 136, 228, 0.52);
 }
-	
+.user-block .search-site {
+	display:				inline-block;
+	vertical-align:			baseline;
+ 	padding:				7px 11px;
+	background-color: 		#9db1a5;
+	border-radius:			50%;
+}	
 .user-block .login {
 	margin-right:		10px;
 }
@@ -257,43 +258,6 @@ a.sub-new::after {
 	border-radius:			20px;
 	color:					white;		
 }
-.user-block .login
-/* .user-block .user-basket { */  {
-	position: 				relative;
-	padding-left:			33px;
-}
-.login::before
-/* .user-basket::before*/ {
-	top:			 		5px;
-	left:					8px;  
-	width:					21px;
-	height: 				20px;
-	background-repeat: 		no-repeat;
-	background-position: 	0 0;
-}
-.login::before {
-	background-image: 		url("../img/entrance.svg");
-	fill: 					white;
-}
-
-
-
-.user-basket .svg-basket {
-	fill:			yellow;
-}
-
-.user-basket:hover .svg1 {
-	fill:			red;
-}
-.u1ser-block .user-basket svg {
-	padding-top: 2px;
-}	
-	
-/* .user-basket::before { */
-	/* background-image: 		url("../img/basket.svg"); */
-/* } */
-
-
 .user-block p {
 	font-size: 		14px;
 	line-height: 	1.142;
@@ -472,7 +436,7 @@ a.sub-new::after {
 	line-height: 		1.375;
 	font-weight: 		400;
 	color:				#5a5a5a;
-	padding:		27px 20px; 
+	padding:			27px 20px; 
 }
 .subscribe input[type="email"] {
 	width: 				245px;
