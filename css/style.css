@@ -6,6 +6,7 @@ html {
 }
 .features-list li::before,
 .map-close::before,
+.map-close2::after,
 .info-part li:first-child::before,
 a.sub-new::after {
 	content: 		"";
@@ -460,7 +461,7 @@ a.sub-new::after {
 }
 .map-modal {
 	position:			fixed;
-	top:				340px;
+	top:				337px;
 	left:				35%;
 	width: 				478px;
 	height: 			443px;
@@ -536,7 +537,7 @@ a.sub-new::after {
 }
 .map-close::after {
 	transform: 			rotate(-45deg);
-}	
+}
 .pagination-list {
 	display:			flex;
 	list-style:			none;
