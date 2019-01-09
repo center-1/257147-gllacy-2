@@ -23,9 +23,10 @@ body {
 }
 .main-header {
 	display: 		flex;
-	align-items: 	center;
+	/* align-items: 	center; */
 }
 .logo {
+	/* margin:			9px 6px 0px 0px; */
 	width:			160px;
 }
 .container {
@@ -45,7 +46,7 @@ img {
 }
 .main-menu ul {
 	display: 			flex;
-	justify-content: 	space-around;
+	/* justify-content: 	space-around; */
 	list-style:			none;
 }
 .main-menu a {
@@ -59,6 +60,9 @@ img {
 	line-height: 		1.125;
 	font-weight: 		700;
 	color:				white;
+}
+.main-item {
+	margin-right:		7px;
 }
 .main-menu li:hover {
 	background-color:	white;
@@ -270,7 +274,7 @@ a.sub-new::after {
 	font-weight: 	700;
 }
 .sliders {
-	margin-top:		170px;
+	margin-top:		300px;
 }
 .breadcrumbs {
 	list-style:		none;
@@ -292,6 +296,10 @@ a.sub-new::after {
 	background: 		url("../img/basket_red.svg") no-repeat;
 	background-color:	white;
 	color:				#323232;
+}
+.select {
+	display:			flex;
+	justify-content: 	space-between;
 }
 .sel-raspberry,
 .sel-chocolate {
