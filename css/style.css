@@ -23,11 +23,10 @@ body {
 }
 .main-header {
 	display: 		flex;
-	/* align-items: 	center; */
 }
 .logo {
-	/* margin:			9px 6px 0px 0px; */
 	width:			160px;
+	margin-top:		9px;
 }
 .container {
 	width:	 		1200px;
@@ -43,6 +42,7 @@ img {
 }
 .main-menu  { 
 	position: 			relative; 
+	margin:				23px 0px 0px 7px;
 }
 .main-menu ul {
 	display: 			flex;
@@ -62,7 +62,7 @@ img {
 	color:				white;
 }
 .main-item {
-	margin-right:		7px;
+	margin-right:		6px;
 }
 .main-menu li:hover {
 	background-color:	white;
@@ -125,18 +125,25 @@ img {
 a.sub-new::after {
     left: 				6px;
     right: 				9px;
-    top: 				30px;
+    top: 				37px;
     border-bottom: 		solid 1px #d1d0ce;
+}
+.sub-menu .sub-new {
+	padding:			12px 21px;
 }
 .sub-menu a {
 	display:			block;
 	color:				#323232;
 	margin: 			0;
- 	padding:			8px 21px;
+ 	padding:			9px 21px 8px;
 	border-bottom:		none;
 	font-size:			14px;
 	line-height:		1.142;
 	font-weight:		400;
+}
+.sub-menu .sub-melorin {
+	padding-top:		8px;
+	padding-bottom:		12px;
 }
 .sub-menu a:hover {
 	background-color:	#fbded7;
@@ -155,7 +162,7 @@ a.sub-new::after {
 .user-block {
 	position:			relative;
 	width:				270px;
-	margin-left:		auto;
+	margin:				17px 0px 0px auto;
 }
 .breadcrumbs {
 	display:			flex;
