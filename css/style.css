@@ -46,7 +46,6 @@ img {
 }
 .main-menu ul {
 	display: 			flex;
-	/* justify-content: 	space-around; */
 	list-style:			none;
 }
 .main-menu a {
@@ -160,9 +159,11 @@ a.sub-new::after {
 	border-bottom-right-radius:		5px;
 }
 .user-block {
-	position:			relative;
+	display:			flex;
+	flex-wrap:			wrap;
+	justify-content:	flex-end;
 	width:				270px;
-	margin:				17px 0px 0px auto;
+	margin:				29px 0px 0px auto;
 }
 .breadcrumbs {
 	display:			flex;
@@ -170,7 +171,7 @@ a.sub-new::after {
 .user-data > form {
 	position:			absolute;
 	top: 				120px;
-	left: 				-400px;
+	left: 				250px;
 	width: 				341px;
 	height:				84px;
 	border-radius:		5px;
@@ -194,15 +195,14 @@ a.sub-new::after {
 	right: 				200px;
 	width: 				277px;
 	height: 			214px;
-	padding: 			20px 18px;	/*в макет не попадаю*/
+	padding: 			20px 18px;
 	border-radius:		5px;
 }
 .modal-login input[type="email"],
 .modal-login input[type="password"] {
 	width: 				241px;
 	height: 			44px;
-	padding: 			10px 40px 10px 15px; /*изменил, разницы не вижу*/ /* 10 40 10 15px */
-	padding-right:		40px;
+	padding: 			10px 40px 10px 15px;
 	border: 			1px solid #d3d3d2;
 	background-color: 	#ffffff;
 	border-radius:		5px;	
@@ -248,20 +248,24 @@ a.sub-new::after {
 	border: 			2px solid rgba(46, 136, 228, 0.52);
 }
 .user-block .search-site {
-	display:				inline-block;
-	vertical-align:			baseline;
- 	padding:				7px 11px;
+	position:				relative;
+ 	padding:				5px 14px 8px 17px;
 	background-color: 		#9db1a5;
 	border-radius:			50%;
-}	
+}
+.search-site svg {
+	position:			absolute;
+	top:				7px;
+	left:				7px;
+}
+.user-block .search-site,
 .user-block .login {
 	margin-right:		10px;
 }
 .user-block .login,
 .user-block .user-basket {
-	display:				inline-block;
-	vertical-align:			baseline;
- 	padding:				7px 11px;
+	position:				relative;
+ 	padding:				7px 15px 8px 44px;
 	font-size: 				14px;
 	line-height: 			1.142;
 	font-weight: 			500;
@@ -269,11 +273,25 @@ a.sub-new::after {
 	border-radius:			20px;
 	color:					white;		
 }
+.login svg,
+.user-basket svg {
+	position:			absolute;
+	top:				5px;
+	left:				16px;
+}
+.user-block .user-info {
+	margin-top:		26px;
+	text-align:		right;
+}
+.user-info .phone {
+	color:			white;
+}
 .user-block p {
 	margin:			0;
 	font-size: 		14px;
 	line-height: 	1.142;
 	font-weight: 	700;
+	margin-bottom:	5px;
 }
 .user-block .phone { 
 	font-size: 		22px;
