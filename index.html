@@ -39,7 +39,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
 						</svg>
 					</a>
-					<form action="?" method="get" class="visually-hidden">
+					<form action="?" method="get" class="popup-search visually-hidden">
 						<input type="text" name="search" placeholder="Что ищем?">
 					</form>
 					<a class="login" href="#">
@@ -47,8 +47,8 @@
 						</svg>
 						Вход 
 					</a>
-					<section class="modal visually-hidden">
-						<form action="https://echo.htmlacademy.ru" method="post" class="modal-login">
+					<section class="popup visually-hidden">
+						<form action="https://echo.htmlacademy.ru" method="post" class="popup-login">
 							<p>
 								<label for="email" class="visually-hidden">Электронная почта</label>
 								<input id="email" type="email" name="email" placeholder="Электронная почта">
@@ -57,7 +57,7 @@
 								<label for="password" class="visually-hidden">Пароль</label>
 								<input id="password" type="password" name="password" placeholder="Пароль">
 							</p>
-							<div class="modal-autorization">
+							<div class="popup-autorization">
 								<input type="submit" value="Войти" name="autorization">
 								<div>
 									<a href="#"> Забыли пароль? </a>
@@ -195,7 +195,7 @@
 				</div>
 			</div>
 			<div class="map">
-				<form action="https://echo.htmlacademy.ru" method="post" class="map-modal visually-hidden">
+				<form action="https://echo.htmlacademy.ru" method="post" class="modal-feedback visually-hidden">
 					Мы обязательно вам ответим!
 					<input type="text" name="name" placeholder="Как вас зовут?">
 					<input type="email" name="email" placeholder="Ваша почта для ответа?">
