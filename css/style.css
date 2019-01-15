@@ -611,9 +611,15 @@ a.sub-new::after {
 }
 .subscribe {
 	width:				560px;
-	background:			url("../img/subscribe_bg.png") no-repeat;
-	padding-top:		7px;
-	padding-left:		7px;
+	background-image:	repeating-linear-gradient(135deg,transparent 0,transparent 6.855px,#92cdff 6.855px,#92cdff 13.71px,transparent 13.71px,transparent 20.565px,#fe9e90 20.565px,#fe9e90 27.42px);
+	background-color:	#f8f7f4;
+	border-radius:		15px;
+	padding:			5px;
+}
+.subscribe-container {
+	background-color:	#f8f7f4;
+	min-height: 		210px;
+	border-radius:		15px;
 }
 .subscribe p {
 	margin:				0;
@@ -625,6 +631,7 @@ a.sub-new::after {
 }
 .subscribe form {
 	margin:				8px 0 0 20px;
+	padding-bottom:		30px;
 	border:				none;
 }
 
