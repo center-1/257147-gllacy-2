@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title> «Глейси» - Каталог мороженого </title>
+	<link rel="shortcut icon" href="icon.png">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -18,9 +19,9 @@
 			<ul class="reset-list">
 				<li class="main-item">
 					<a class="catalog-current"> Каталог </a>
-					<ul class="sub-menu visually-hidden reset-list">
+					<ul class="sub-menu sub-hover reset-list">
 						<li><a class="sub-new" href="#"> Новинки </a></li>
-						<li><a href="catalog.html"> Сливочное </a></li>
+						<li class="sub-menu-current"><a id="link-current" href="catalog.html"> Сливочное </a></li>
 						<li><a href="#"> Щербеты </a></li>
 						<li><a href="#"> Фруктовый лед </a></li>
 						<li><a class="sub-melorin" href="#"> Мелорин </a></li>
@@ -69,7 +70,9 @@
 					</form>
 				</section>
 					
-				<a class="user-basket basket-link" href="#"> 
+				<a class="user-basket-red" href="#"> 
+					<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
+					</svg>
 					2 товара 			<!-- нужно смотреть оба класса!!  -->	
 				</a>			<!-- красная корзина вставляется внешним .svg файлом по классу -->	
 				
@@ -265,7 +268,7 @@
                   </label>
                 </div>
               </fieldset>
-              <button class="button filter-button" type="submit">Применить</button>
+              <button class="filter-button" type="submit">Применить</button>
             </form>
           </section>	
 	
@@ -363,7 +366,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочное с апельсиновым джемом и цитрусовой стружкой </a>
 			</h2>
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -375,7 +378,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочно-кофейное с кусочками шоколада </a>
 			</h2>
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item"> 
 			<a href="#">
@@ -387,7 +390,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочно-клубничное с присыпкой из белого шоколада </a>
 			</h2>
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item"> 
 			<a href="#">
@@ -399,7 +402,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочное крем-брюле с карамельной подливкой </a>
 			</h2>
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -411,7 +414,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочное с брусничным джемом </a> 
 			</h2>
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -423,7 +426,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочно-черничное с цельными ягодами черники </a>
 			</h2> 
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -435,7 +438,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочно-лимонное с карамельной присыпкой </a>
 			</h2> 
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -447,7 +450,7 @@
 			<h2 class="price-heading">
 				<a href="#"> Сливочное с шоколадной стружкой </a>
 			</h2> 
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -459,7 +462,7 @@
 			<h2 class="price-heading">	
 				<a href="#"> Сливочно-ванильное с кусочками шоколада </a> 
 			</h2> 
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -471,7 +474,7 @@
 			<h2 class="price-heading">				
 				<a href="#"> Сливочное с ментоловым сиропом </a> 
 			</h2> 
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -483,7 +486,7 @@
 			<h2 class="price-heading">			
 				<a href="#"> Сливочное с кусочками черного шоколада </a> 
 			</h2> 
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		<article class="price-item">
 			<a href="#">
@@ -495,7 +498,7 @@
 			<h2 class="price-heading">			
 				<a href="#"> Сливочное с мятным сиропом </a> 
 			</h2> 
-			<a href="#" class="price-button"> Быстрый просмотр </a>
+			<a href="#" class="button price-button"> Быстрый просмотр </a>
 		</article>
 		
 		

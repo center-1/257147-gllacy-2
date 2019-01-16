@@ -24,10 +24,12 @@ body {
 }
 .main-header {
 	display: 		flex;
+	z-index:		20;
 }
 .logo {
 	width:			160px;
 	margin-top:		9px;
+	z-index:		5;
 }
 .container {
 	width:	 		1200px;
@@ -44,6 +46,7 @@ img {
 .main-menu  { 
 	position: 			relative; 
 	margin:				23px 0px 0px 7px;
+	z-index:			7;
 }
 .main-menu ul {
 	display: 			flex;
@@ -68,22 +71,25 @@ img {
 	background-color:	white;
 	border-radius:		20px;
 }
-
-
-
-
-.catalog-current {				/* new */
-    /* padding: 8px 14px; */
-    margin: 0;
-    color: #fff;
-    border-bottom: none;
-    border-radius: 16px;
-    background-color: #d07058;
+.sub-menu.sub-hover {
+	display:		none;
+}
+.main-item:hover .sub-menu.sub-hover {
+	display:		block;
 }
 
 
-
-
+.main-menu .catalog-current {				/* new */
+	margin: 			0;
+	padding:			8px 14px;
+	border-bottom:		none;
+	border-radius:		16px;
+	background-color:	#d07058;
+	cursor:				pointer;
+}
+.main-item .catalog-current:hover {
+	color:			#ffffff;
+}
 
 .user-data .search-site:hover,
 .user-data .login:hover,
@@ -176,20 +182,29 @@ a.sub-new::after {
 	border-bottom-left-radius:		5px;
 	border-bottom-right-radius:		5px;
 }
+.sub-menu-current {
+	background-color:	#d07058;
+}
+#link-current {
+	color:				white;	/* на классах работает только когда их три.. пришлось  id */
+}
+
 .user-block {
 	display:			flex;
 	flex-wrap:			wrap;
 	justify-content:	flex-end;
 	width:				270px;
 	margin:				29px 0px 0px auto;
+	z-index:			5;
 }
 .breadcrumbs {
 	display:			flex;
 }
 .user-data .popup-search {
+	display:			none;			/* new */
 	position:			absolute;
 	top: 				59px;
-	left: 				695px;
+	right: 				252px;
 	width: 				341px;
 	height:				84px;
 	border-radius:		5px;
@@ -197,6 +212,12 @@ a.sub-new::after {
 	padding:			20px 15px;
 	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 }
+
+.search-site:hover .popup-search {
+	display:		block;	 /* не работает, ну и вопросы я оставил внизу этого файла. display:none VS visually-hidden */
+}
+
+
 .user-data input[type="text"] {
 	width: 				311px;
 	height: 			44px;
@@ -205,16 +226,17 @@ a.sub-new::after {
 	border-radius:		5px;
 	padding-left:		15px;
 }
-.popup-login-form {  /* .modal */
+.popup-login-form {
 	position:			absolute;
 	background-color:	#f8f7f4;
 	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 	top: 				59px;
-	right: 				210px;
+	right: 				149px;
 	width: 				277px;
 	height: 			214px;
 	padding: 			20px 18px;
 	border-radius:		5px;
+	z-index:			7;
 }
 .popup-login input[type="email"],
 .popup-login input[type="password"] {
@@ -235,9 +257,9 @@ a.sub-new::after {
 	margin-right:		20px;
 	border:				0;
 	border-radius:		20px;
-	box-shadow:			0 1px 2px #ac1000;
+	/* box-shadow:			0 1px 2px #ac1000; */
 	background-color:	#e84d37;
-	background-image:	linear-gradient(to top, #e74a35, #f26843);
+	/* background-image:	linear-gradient(to top, #e74a35, #f26843); */
 	color:				#fefefe;
 	font-size:			18px;
 	font-weight:		700;
@@ -297,17 +319,33 @@ a.sub-new::after {
 	border-radius:			20px;
 	color:					white;		
 }
+.user-block .user-basket-red {
+	position:				relative;
+ 	padding:				7px 15px 8px 44px;
+	font-size: 				14px;
+	line-height: 			1.142;
+	font-weight: 			500;
+	background-color: 		#f8f7f4;
+	border-radius:			20px;
+	color:					#323232;
+}
 .login svg,
-.user-basket svg {
+.user-basket svg,
+.user-basket-red svg {
 	position:			absolute;
 	top:				5px;
 	left:				16px;
 }
 
-.popup-basket {
-	position:			absolute;
-	top:				56px;
-	left:				50px;
+/* .popup-basket { */
+	/* position:			absolute; */
+	/* top:				56px; */
+	/* left:				50px; */
+/* } */
+
+.user-basket-red:hover .popup-basket,
+.user-basket-red:focus .popup-basket {
+	display:			block;
 }
 
 
@@ -334,16 +372,18 @@ a.sub-new::after {
  /* display: -webkit-box; */
   /* display: -ms-flexbox; */
   /* display: flex; */
+	position:		relative;
 	margin:			0;
-	margin-top:		-45px;
+	margin-top:		-44px;
 	padding:		0;
 	list-style:		none;
 	font-size:		14px;
 	line-height:	1.385em;
 	color:			#ffffff;
+	z-index:		5;
 }
 .breadcrumbs li {
-	margin-right:		6px;
+	margin-right:		7px;
 }
 .breadcrumbs a {
 	border-bottom:		1px solid rgba(255, 255, 255, 0.3);
@@ -358,7 +398,11 @@ a.sub-new::after {
 .breadcrumbs li:last-child {
 	margin-top:		2px;
 }
-
+.breadcrumbs + h1 {
+	font-size:			35px;
+	line-height:		1.171;
+	margin:				3px 0 28px 0;
+}
 
 
 
@@ -418,7 +462,7 @@ a.sub-new::after {
 	right:				21px;
 	padding:			12px 23px 13px 22px;
 	border-radius:		23px;
-	box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
+	/* box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64); */
 	opacity:			0.99;
 }
 .sel-raspberry a,
@@ -439,6 +483,7 @@ a.sub-new::after {
 	width:				267px;
 	text-align: 		center;
 	position:			relative;
+	margin-bottom:		10px;
 }
 .hit-item::before {
 	content: 			"";
@@ -498,9 +543,9 @@ a.sub-new::after {
 	line-height:		1.222;
 	padding:			11px 19px;
 	border-radius:		23px;
-	box-shadow: 		0 1px 2px #ac1000;
+	/* box-shadow: 		0 1px 2px #ac1000; */
 	background-color: 	#e84d37;
-	background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%);
+	/* background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%); */
 }
 
 .price-item:hover,				/* new */
@@ -610,11 +655,11 @@ a.sub-new::after {
 	text-decoration: 	underline;
 }
 .subscribe {
-	width:				560px;
-	background-image:	repeating-linear-gradient(135deg,transparent 0,transparent 6.855px,#92cdff 6.855px,#92cdff 13.71px,transparent 13.71px,transparent 20.565px,#fe9e90 20.565px,#fe9e90 27.42px);
-	background-color:	#f8f7f4;
-	border-radius:		15px;
-	padding:			5px;
+	width:					560px;
+	background-image:		repeating-linear-gradient(135deg,transparent 0,transparent 6.855px,#92cdff 6.855px,#92cdff 13.71px,transparent 13.71px,transparent 20.565px,#fe9e90 20.565px,#fe9e90 27.42px);
+	background-color:		#f8f7f4;
+	border-radius:			15px;
+	padding:				5px;
 }
 .subscribe-container {
 	background-color:	#f8f7f4;
@@ -647,8 +692,8 @@ a.sub-new::after {
 .subscribe button {
 	min-width: 			129px;
 	min-height: 		44px;
-	box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
-	background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%);
+	/* box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64); */
+	/* background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%); */
 	color: 				#fefefe;
 	font-size: 			18px;
 	font-weight: 		700;
@@ -709,10 +754,10 @@ a.sub-new::after {
 	min-width: 			139px;
 	min-height: 		44px;
 	margin-left:		65%;
-	box-shadow: 		0 2px 2px rgba(172, 16, 0, 0.64);
+	/* box-shadow: 		0 2px 2px rgba(172, 16, 0, 0.64); */
 	background-color: 	#e84d37;
 	color: 				#fefefe;
-	background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%);
+	/* background-image: 	linear-gradient(to top, #e74a35 0%, #f26843 100%); */
 	border:				0;
 	border-radius:		20px;
 	font-size: 			18px;
@@ -898,140 +943,123 @@ z-index  не работает
 
 
 .site-wrapper {
-  min-width: 940px;
-  background-color: #849d8f;
-  background-image: url("../img/ice_raspberries_bar_slide1.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  
-  transition: background-image 0.5s ease, background-color 0.5s ease;   
+	min-width:				940px;
+	background-color:		#849d8f;
+	background-image:		url("../img/ice_raspberries_bar_slide1.png");
+	background-repeat:		no-repeat;
+	background-position:	top center;  
+	transition:				background-image 0.5s ease, background-color 0.5s ease;
+	z-index:				5;		/* помогает подогнать блок как нужно */
+	margin-top:				-141px;	/* но при этом блокирует работу с ним, как правильно реализовать текущий слайдер? */
 }
-
 .site-wrapper::before,
 .site-wrapper::after {
-  content: "";
-  visibility: hidden;
+	content:		"";
+	visibility:		hidden;
 }
-
 .site-wrapper::before {
-  background-image: url("../img/ice_chocolate_bar_slide2.png");
+	background-image:	url("../img/ice_chocolate_bar_slide2.png");
 }
-
 .site-wrapper::after {
-  background-image: url("../img/ice_strawberry_bar_slide3.png");
+	background-image:	url("../img/ice_strawberry_bar_slide3.png");
 }
-
-
 .slider {
-  position: relative;
-  
-  padding-top: 321px;
-  
-  text-align: center;
-  color: #ffffff;
+	position:		relative;
+	padding-top:	321px;
+	text-align:		center;
+	color:			#ffffff;
 }
-
 .slider-list {
-  margin: 0;
-  padding: 0;
-  
-  list-style: none;
+	margin:			0;
+	padding:		0;  
+	list-style:		none;
 }
-
 .slide {
-  display: none;
+	display:		none;
 }
-
 .slide-title {
-  width: 700px;
-  margin: 0 auto;
-  margin-bottom: 27px;
-  
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 800;
+	width:			700px;
+	margin:			71px auto 27px;
+	font-size:		60px;
+	line-height:	60px;
+	font-weight:	800;
 }
-
 .button-slider {
-  display: inline-block;
-  padding: 12px 44px;
-
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
-  text-align: center;
-  color: #ffffff;
-  vertical-align: top;
-  text-decoration: none;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-  background: #f26843;
-  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 50px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  border: none;
-
-  cursor: pointer;
+	display:			inline-block;
+	padding:			12px 44px;
+	margin-bottom:		22px;
+	font-weight:		600;
+	font-size:			31px;
+	line-height:		41px;
+	text-align:			center;
+	color:				#ffffff;
+	vertical-align:		top;
+	text-decoration:	none;
+	text-shadow:		0 2px 5px rgba(160, 32, 11, 0.76);
+	background:			#f26843;
+	background:			linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	border-radius:		50px;
+	box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
+	border:				none;
+	cursor:				pointer;
 }
-
-.button-slider:hover {
-  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+.popup-login-form input[type="submit"]:hover,
+.button-slider:hover,
+.sel-button:hover,
+.sel-button:hover,
+.price-button:hover,
+.subscribe button:hover,
+.modal-feedback input[type="submit"]:hover {
+	background:			linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+	box-shadow: 		0 2px 2px rgba(172, 16, 0, 1);
 }
-
-.button-slider:active {
-  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+.popup-login-form input[type="submit"]:focus,
+.button-slider:active,
+.sel-button:active,
+.sel-button:active,
+.price-button:active,
+.subscribe button:active,
+.modal-feedback input[type="submit"]:focus {
+	background: 		linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+	box-shadow:			inset 0 2px 2px rgba(172, 16, 0, 1);
 }
-
 .slider-controls {
-  position: absolute;
-  bottom: 63px;
-  left: 0;
-  z-index: 20;
-  
-  font-size: 0;
+	position:		absolute;
+	bottom:			42px;
+	font-size:		0;
 }
-
 .slider-controls label {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
-
-  vertical-align: top;
-
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
+	display:			inline-block;
+	width:				21px;
+	height:				21px;
+	margin-right:		8px;
+	vertical-align:		top;
+	background-color:	transparent;
+	border:				2px solid #ffffff;
+	border-radius:		50%;
+	cursor:				pointer;
 }
-
 #product-1:checked ~ .site-wrapper {
-  background-color: #849d8f;
-  background-image: url("../img/ice_raspberries_bar_slide1.png");
+	background-color: 		#849d8f;
+	background-image:		url("../img/ice_raspberries_bar_slide1.png");
 }
-
 #product-2:checked ~ .site-wrapper {
-  background-color: #8996a6;
-  background-image: url("../img/ice_chocolate_bar_slide2.png");
+	background-color:		#8996a6;
+	background-image:		url("../img/ice_chocolate_bar_slide2.png");
 }
-
 #product-3:checked ~ .site-wrapper {
-  background-color: #9d8b84;
-  background-image: url("../img/ice_strawberry_bar_slide3.png");
+	background-color:		#9d8b84;
+	background-image:		url("../img/ice_strawberry_bar_slide3.png");
 }
-
 #product-1:checked ~ .site-wrapper #slide1,
 #product-2:checked ~ .site-wrapper #slide2,
 #product-3:checked ~ .site-wrapper #slide3 {
-  display: block;
+	display:			block;
 }
-
 #product-1:checked ~ .site-wrapper label[for="product-1"],
 #product-2:checked ~ .site-wrapper label[for="product-2"],
 #product-3:checked ~ .site-wrapper label[for="product-3"] {
-  background-color: #ffffff;
+	background-color:		#ffffff;
 }
 
 
@@ -1043,7 +1071,7 @@ z-index  не работает
 	font-size:			16px;
 	font-weight:		500;
 	line-height:		1.13em;
-	margin-bottom:		4px;
+	margin-bottom:		40px;
 }
 .filter {
 	display: 			-webkit-box;
@@ -1380,20 +1408,21 @@ z-index  не работает
 
 /*  -------Пагинация-------  */
 .pagination-list {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-     -ms-flex-pack: start;
-   justify-content: flex-start;
-  width: 167px;
-  padding: 0;
-  margin: 0;
-  margin-left: auto;
-  margin-bottom: 28px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	 -ms-flex-pack: start;
+	justify-content: flex-start;
+	width: 167px;
+	padding: 0;
+	/* margin: 0; */
+	/* margin: auto; */
+	/* margin-bottom: 28px; */
+	margin:		43px -27px -2px auto;
 
-  list-style: none;
+	list-style: none;
 
   /* Временно для сетки */
   /*outline: 2px solid #db215e;*/
@@ -1489,7 +1518,9 @@ z-index  не работает
 .popup-basket {
   display: none;
   position: absolute;
-  padding-top: 4px;
+  padding-top: 12px;
+  right:		39px;
+  z-index:		10;
 }
 
 
@@ -1543,6 +1574,15 @@ z-index  не работает
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.button {
+	background:			#f26843;
+	background:			linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
+	border:				none;
+	cursor:				pointer;
+}
+
 
 /*Таблица корзины*/
 .basket-table {
@@ -1610,6 +1650,7 @@ z-index  не работает
   outline: 2px auto -webkit-focus-ring-color;
 }
 
- 
- 
- 
+.container.footer-line {
+	padding-top:			10px;
+}
+
