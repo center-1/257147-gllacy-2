@@ -1,8 +1,10 @@
 html {
-	box-sizing: 		border-box;
+	-webkit-box-sizing: 		border-box;
+	        box-sizing: 		border-box;
 }
 *, *::before, *::after {
-	box-sizing: 		inherit;
+	-webkit-box-sizing: 		inherit;
+	        box-sizing: 		inherit;
 }
 .features-list li::before,
 .map-close::before,
@@ -22,6 +24,8 @@ body {
 	color:				white;
 }
 .main-header {
+	display: 		-webkit-box;
+	display: 		-ms-flexbox;
 	display: 		flex;
 	z-index:		20;
 }
@@ -48,6 +52,8 @@ img {
 	z-index:			7;
 }
 .main-menu ul {
+	display: 			-webkit-box;
+	display: 			-ms-flexbox;
 	display: 			flex;
 	list-style:			none;
 }
@@ -111,7 +117,8 @@ img {
 	text-decoration:	none;
 }
 .main-item:active {
-	box-shadow: 		inset 0 2px 1px #696969;
+	-webkit-box-shadow: 		inset 0 2px 1px #696969;
+	        box-shadow: 		inset 0 2px 1px #696969;
 }
 .sub-menu a:hover {
 	background-color: 	#fbded7;
@@ -130,12 +137,16 @@ img {
 	overflow: 		hidden;
 }
 .sub-menu {
-	flex-direction: 	column;
+	-webkit-box-orient: 	vertical;
+	-webkit-box-direction: 	normal;
+	    -ms-flex-direction: 	column;
+	        flex-direction: 	column;
 	position: 			absolute;
 	top:				37px;
 	left:				-10px;
 	background-color:	#f8f7f4;
-	box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
+	-webkit-box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
+	        box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
 	border-radius:		5px;
 }
 .sub-menu .sub-new {
@@ -186,14 +197,21 @@ a.sub-new::after {
 }
 
 .user-block {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	flex-wrap:			wrap;
-	justify-content:	flex-end;
+	-ms-flex-wrap:			wrap;
+	    flex-wrap:			wrap;
+	-webkit-box-pack:	end;
+	    -ms-flex-pack:	end;
+	        justify-content:	flex-end;
 	width:				270px;
 	margin:				29px 0px 0px auto;
 	z-index:			5;
 }
 .breadcrumbs {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
 }
 .user-data .popup-search {
@@ -206,10 +224,11 @@ a.sub-new::after {
 	border-radius:		5px;
 	background-color: 	#f8f7f4;
 	padding:			20px 15px;
-	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
+	        box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 }
 .search-site:hover .popup-search {
-	display:		block;	 /* не работает, ну и вопросы я оставил внизу этого файла. display:none VS visually-hidden */
+	display:		block;	 /* не работает, ну и вопросы я оставил внизу этого файла (style.css).  display:none VS visually-hidden */
 }
 
 .user-data input[type="text"] {
@@ -223,7 +242,8 @@ a.sub-new::after {
 .popup-login-form {
 	position:			absolute;
 	background-color:	#f8f7f4;
-	box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
+	        box-shadow: 		0 20px 20px rgba(0, 0, 0, 0.4);
 	top: 				59px;
 	right: 				149px;
 	width: 				277px;
@@ -265,6 +285,8 @@ a.sub-new::after {
 	border-bottom: 			1px solid rgba(50,50,50,.3);
 }
 .popup-autorization {
+	display: 			-webkit-box;
+	display: 			-ms-flexbox;
 	display: 			flex;
 }
 .user-data input[type="text"]:hover,
@@ -389,8 +411,12 @@ a.sub-new::after {
 }
 .button {
 	background:			#f26843;
+	background:			-webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+	background:			-webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background:			-o-linear-gradient(top, #f26843 0%, #e74a35 100%);
 	background:			linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-	box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
+	-webkit-box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
+	        box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
 	border:				none;
 	cursor:				pointer;
 }
@@ -482,6 +508,8 @@ a.sub-new::after {
 	background-image:		url("../img/ice_raspberries_bar_slide1.png");
 	background-repeat:		no-repeat;
 	background-position:	top center;  
+	-webkit-transition:				background-image 0.5s ease, background-color 0.5s ease;  
+	-o-transition:				background-image 0.5s ease, background-color 0.5s ease;  
 	transition:				background-image 0.5s ease, background-color 0.5s ease;
 	z-index:				5;
 	margin-top:				-141px;
@@ -531,9 +559,13 @@ a.sub-new::after {
 	text-decoration:	none;
 	text-shadow:		0 2px 5px rgba(160, 32, 11, 0.76);
 	background:			#f26843;
+	background:			-webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+	background:			-webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background:			-o-linear-gradient(top, #f26843 0%, #e74a35 100%);
 	background:			linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 	border-radius:		50px;
-	box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
+	-webkit-box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
+	        box-shadow:			0 2px 2px rgba(172, 16, 0, 0.64);
 	border:				none;
 	cursor:				pointer;
 }
@@ -545,8 +577,12 @@ a.sub-new::after {
 .subscribe button:hover,
 .modal-feedback input[type="submit"]:hover,
 .basket-button:hover {
+	background:			-webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
+	background:			-webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+	background:			-o-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
 	background:			linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-	box-shadow: 		0 2px 2px rgba(172, 16, 0, 1);
+	-webkit-box-shadow: 		0 2px 2px rgba(172, 16, 0, 1);
+	        box-shadow: 		0 2px 2px rgba(172, 16, 0, 1);
 }
 .popup-login-form input[type="submit"]:focus,
 .button-slider:active,
@@ -556,8 +592,12 @@ a.sub-new::after {
 .subscribe button:active,
 .modal-feedback input[type="submit"]:focus,
 .basket-button:focus {
+	background: 		-webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
+	background: 		-webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+	background: 		-o-linear-gradient(top, #d84732 0%, #e1613e 100%);
 	background: 		linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-	box-shadow:			inset 0 2px 2px rgba(172, 16, 0, 1);
+	-webkit-box-shadow:			inset 0 2px 2px rgba(172, 16, 0, 1);
+	        box-shadow:			inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 .slider-controls {
 	position:		absolute;
@@ -759,7 +799,9 @@ a.sub-new::after {
 }
 .range-toggle:hover,
 .range-toggle:focus {
-	transform:		scale(1.1);
+	-webkit-transform:		scale(1.1);
+	    -ms-transform:		scale(1.1);
+	        transform:		scale(1.1);
 	cursor:			pointer;
 }
 .filter-fat {
@@ -767,8 +809,12 @@ a.sub-new::after {
 }
 
 .filter-fat-wrapper {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	justify-content:	space-between;
+	-webkit-box-pack:	justify;
+	    -ms-flex-pack:	justify;
+	        justify-content:	space-between;
 }
 .filter-radio {
 	position:			relative;
@@ -821,8 +867,12 @@ a.sub-new::after {
 	width:			703px;
 }
 .filter-filler-wrapper {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	justify-content:	space-between;
+	-webkit-box-pack:	justify;
+	    -ms-flex-pack:	justify;
+	        justify-content:	space-between;
 	padding:			9px 20px 9px 16px;
 }
 .filter-checkbox {
@@ -907,8 +957,12 @@ a.sub-new::after {
 	
 
 .select {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	justify-content: 	space-between;
+	-webkit-box-pack: 	justify;
+	    -ms-flex-pack: 	justify;
+	        justify-content: 	space-between;
 	margin-bottom:		40px;
 }
 .sel-raspberry,
@@ -959,9 +1013,14 @@ a.sub-new::after {
 	color:				white;
 }
 .price {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	flex-wrap:			wrap;
-	justify-content: 	space-between;
+	-ms-flex-wrap:			wrap;
+	    flex-wrap:			wrap;
+	-webkit-box-pack: 	justify;
+	    -ms-flex-pack: 	justify;
+	        justify-content: 	space-between;
 	margin-bottom:		10px;
 } 
 .price-item {
@@ -1038,7 +1097,8 @@ a.sub-new::after {
     width:				277px;
     min-height:			405px;
     background-color:	rgba(248,247,244,.2);
-    box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
+    -webkit-box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
+            box-shadow:			0 20px 20px 0 rgba(0,0,0,.4);
     border-radius: 		5px;
 }
 .price-item:hover .price-button,
@@ -1069,9 +1129,14 @@ a.sub-new::after {
 	list-style:			none;
 }
 .features-list {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	justify-content: 	space-between;
-	flex-wrap: 			wrap;
+	-webkit-box-pack: 	justify;
+	    -ms-flex-pack: 	justify;
+	        justify-content: 	space-between;
+	-ms-flex-wrap: 			wrap;
+	    flex-wrap: 			wrap;
 }
 .features-list li {
 	position:			relative;
@@ -1102,8 +1167,12 @@ a.sub-new::after {
 	background: 			url("../img/thermometer.svg") no-repeat;
 }
 .user-blog {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	justify-content:	space-between;
+	-webkit-box-pack:	justify;
+	    -ms-flex-pack:	justify;
+	        justify-content:	space-between;
 	min-height:			220px;
 	margin-bottom:		40px;
 }
@@ -1137,6 +1206,8 @@ a.sub-new::after {
 }
 .subscribe {
 	width:					560px;
+	background-image:		-webkit-repeating-linear-gradient(315deg,transparent 0,transparent 6.855px,#92cdff 6.855px,#92cdff 13.71px,transparent 13.71px,transparent 20.565px,#fe9e90 20.565px,#fe9e90 27.42px);
+	background-image:		-o-repeating-linear-gradient(315deg,transparent 0,transparent 6.855px,#92cdff 6.855px,#92cdff 13.71px,transparent 13.71px,transparent 20.565px,#fe9e90 20.565px,#fe9e90 27.42px);
 	background-image:		repeating-linear-gradient(135deg,transparent 0,transparent 6.855px,#92cdff 6.855px,#92cdff 13.71px,transparent 13.71px,transparent 20.565px,#fe9e90 20.565px,#fe9e90 27.42px);
 	background-color:		#f8f7f4;
 	border-radius:			15px;
@@ -1166,7 +1237,8 @@ a.sub-new::after {
 	height: 			44px;
 	border-radius:		5px;
     border: 			0;
-	box-shadow:			0 0 0 1px #b3b3b3;
+	-webkit-box-shadow:			0 0 0 1px #b3b3b3;
+	        box-shadow:			0 0 0 1px #b3b3b3;
 	padding:			5px 10px;
 	margin-right:		7px;
 }
@@ -1261,10 +1333,14 @@ a.sub-new::after {
 	background-color: 	black;
 }
 .map-close::before {
-	transform: 			rotate(45deg);
+	-webkit-transform: 			rotate(45deg);
+	    -ms-transform: 			rotate(45deg);
+	        transform: 			rotate(45deg);
 }
 .map-close::after {
-	transform: 			rotate(-45deg);
+	-webkit-transform: 			rotate(-45deg);
+	    -ms-transform: 			rotate(-45deg);
+	        transform: 			rotate(-45deg);
 }
 
 .pagination-list {
@@ -1346,12 +1422,16 @@ a.sub-new::after {
 }
 
 footer {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
 }
 .footer-line {
 	border-top:			1px solid rgba(255, 255, 255, 0.3);
 }
 .footer-social ul {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
 	width:				186px;
 	margin-right:		130px;
@@ -1388,8 +1468,11 @@ footer {
 	margin-top:			22px;
 }
 .footer-info ul {
+	display:			-webkit-box;
+	display:			-ms-flexbox;
 	display:			flex;
-	flex-wrap: 			wrap;
+	-ms-flex-wrap: 			wrap;
+	    flex-wrap: 			wrap;
 	width:				400px;
 	padding-left:		15px;
 }
@@ -1487,6 +1570,8 @@ footer {
 и еще момент, карточки товара .price article, прыгают при наведении соседние карточки тоже и срабатывает свойство
 	justify-content: space-between;
 	как можно это убрать?!
+	
+и так же не понимаю, почему  меню => каталог, при наведении есть мертвая зона, когда  sub-menu  может сразу закрыться 
 	
 и вот ещё вспомнил, а почему сейчас все иконки, как вход/корзина/замочек в поле пароля и пр. делают через  .svg 
 ведь раньше было все на растре и делали спрайты, специально, чтоб меньше было запросов. Я понимаю что  .svg хорош, но кол-во запросов ведь выше  ??
