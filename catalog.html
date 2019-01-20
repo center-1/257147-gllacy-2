@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <title> «Глейси» - Каталог мороженого </title>
 	<link rel="shortcut icon" href="icon.png">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.min.css">
+<!-- 	<link rel="stylesheet" href="css/style.min.css"> -->
+	<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 	<header class="main-header container">
@@ -21,7 +22,7 @@
 					<a class="catalog-current"> Каталог </a>
 					<ul class="sub-menu sub-hover reset-list">
 						<li><a class="sub-new" href="#"> Новинки </a></li>
-						<li class="sub-menu-current"><a id="link-current" href="catalog.html"> Сливочное </a></li>
+						<li class="sub-menu-current"><a class="link-current" href="catalog.html"> Сливочное </a></li>
 						<li><a href="#"> Щербеты </a></li>
 						<li><a href="#"> Фруктовый лед </a></li>
 						<li><a class="sub-melorin" href="#"> Мелорин </a></li>
@@ -42,7 +43,7 @@
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
 					</svg>
 				</a>
-				<form action="?" method="get" class="popup-search visually-hidden">
+				<form action="?" method="get" class="popup-search">
 					<input type="text" name="search" placeholder="Что ищем?">
 				</form>
 				<a class="login" href="#">
@@ -50,7 +51,7 @@
 					</svg>
 					Вход 
 				</a>
-				<section class="popup-login-form visually-hidden">
+				<section class="popup-login-form">
 					<form action="https://echo.htmlacademy.ru" method="post" class="popup-login">
 						<p>
 							<label for="email" class="visually-hidden">Электронная почта</label>
@@ -371,7 +372,7 @@
 			</ul>
 		</section>
 	</div>
-	<footer class="container footer-line">
+	<footer class="main-footer container footer-line">
 		<div class="footer-social">
 			<ul class="reset-list">
 				<li>
