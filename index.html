@@ -6,8 +6,7 @@
 		<link rel="shortcut icon" href="icon.png">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
-<!-- 		<link rel="stylesheet" href="css/style.min.css"> -->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	<body>
 		<header class="main-header container">
@@ -118,13 +117,13 @@
 			</div>
 			<div class="select container"> 
 				<div class="sel-raspberry">
-					<p>Малинка даром!</p>
-					<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+					<p class="raspberry-heading">Малинка даром!</p>
+					<p class="raspberry-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 					<a href="#" class="button sel-button">Хочу варенье!</a>
 				</div>
 				<div class="sel-chocolate">
-					<p>Шоколадки даром!</p>
-					<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+					<p class="chocolate-heading">Шоколадки даром!</p>
+					<p class="chocolate-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 					<a href="#" class="button sel-button">Хочу шоколадки!</a>
 				</div>
 			</div>
@@ -210,33 +209,29 @@
 				</div>
 			</div>
 			<div class="map">
-				<form action="https://echo.htmlacademy.ru" method="post" class="modal-feedback">
-					Мы обязательно вам ответим!
-					<input type="text" name="name" placeholder="Как вас зовут?">
-					<input type="email" name="email" placeholder="Ваша почта для ответа?">
-					<textarea id="comment-field" name="comment" rows="5" cols="45" placeholder="Напишите что-нибудь..."></textarea> 
-					<input class="button" type="submit" name="feedback" value="Отправить">
-					<button class="map-close map-close2" type="button">Закрыть</button>
-				</form>
-				
-<!-- 				<div class="container-location"> -->
-					<section class="map-contacts">
-						<h2 class="visually-hidden">Контакты</h2>
-						<p>
-						  Адрес главного офиса<br>
-						  и офлайн магазина:
-						  <b>ул. Большая Конюшенная<br>
-							19/8, Санкт-Петербург</b>
-						</p>
-						<p>
-						  Для заказов по телефону:
-						  <b>8 812 450-25-25</b>
-						  (с 10 до 20 ежедневно)
-						</p>
-						<a class="button contacts-button" href="#">Форма обратной связи</a>
-					</section>
-<!-- 				</div> -->
-			
+			<form action="https://echo.htmlacademy.ru" method="post" class="modal-feedback">
+				Мы обязательно вам ответим!
+				<input type="text" name="name" placeholder="Как вас зовут?">
+				<input type="email" name="email" placeholder="Ваша почта для ответа?">
+				<textarea id="comment-field" name="comment" rows="5" cols="45" placeholder="Напишите что-нибудь..."></textarea> 
+				<input class="button" type="submit" name="feedback" value="Отправить">
+				<button class="map-close map-close2" type="button">Закрыть</button>
+			</form>
+				<section class="map-contacts">
+					<h2 class="visually-hidden">Контакты</h2>
+					<p>
+					  Адрес главного офиса<br>
+					  и офлайн магазина:
+					  <b>ул. Большая Конюшенная<br>
+						19/8, Санкт-Петербург</b>
+					</p>
+					<p>
+					  Для заказов по телефону:
+					  <b>8 812 450-25-25</b>
+					  (с 10 до 20 ежедневно)
+					</p>
+					<a class="button contacts-button" href="#">Форма обратной связи</a>
+				</section>
 			</div>
 		</main>
 		<footer class="main-footer container">
@@ -286,7 +281,7 @@
 				</a>
 				<p class="copyright">Сделано в 
 					<a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 
-					&copy; 2017 
+					&copy;2017 
 				</p>
 			</div>
 		</footer>
