@@ -1,7 +1,16 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  min-width: 1146px;
+
+
+background: url("../img/gllacy-index.jpg") no-repeat center top; 
+
+
+
 }
+
+
 *,
 *::before,
 *::after {
@@ -12,7 +21,8 @@ html {
 .map-close::before,
 .map-close2::after,
 .info-part li:first-child::before,
-a.sub-new::after {
+a.sub-new::after,
+.footer-line::before {
   content: "";
   position: absolute;
 }
@@ -24,6 +34,15 @@ body {
   background-color: #849d8f;
   font-family: Roboto, Arial, sans-serif;
   color: white;
+
+           opacity: 0.5
+
+
+}
+.body-bg {
+  background-image: url("../img/ice_raspberries_bar_slide1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 .main-header {
   display: -webkit-box;
@@ -522,16 +541,19 @@ a.sub-new::after {
 }
 .site-wrapper {
   min-width: 940px;
-  background-color: #849d8f;
+/*  background-color: #849d8f;
   background-image: url("../img/ice_raspberries_bar_slide1.png");
   background-repeat: no-repeat;
   background-position: top center;
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
   -o-transition: background-image 0.5s ease, background-color 0.5s ease;
-  transition: background-image 0.5s ease, background-color 0.5s ease;
+  transition: background-image 0.5s ease, background-color 0.5s ease; */
+
+
   z-index: 5;
   margin-top: -141px;
 }
+
 .site-wrapper::before,
 .site-wrapper::after {
   content: "";
@@ -655,6 +677,9 @@ a.sub-new::after {
   border-radius: 50%;
   cursor: pointer;
 }
+
+
+/*
 #product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
   background-image: url("../img/ice_raspberries_bar_slide1.png");
@@ -667,6 +692,9 @@ a.sub-new::after {
   background-color: #9d8b84;
   background-image: url("../img/ice_strawberry_bar_slide3.png");
 }
+*/
+
+
 #product-1:checked ~ .site-wrapper #slide1,
 #product-2:checked ~ .site-wrapper #slide2,
 #product-3:checked ~ .site-wrapper #slide3 {
@@ -1054,7 +1082,7 @@ a.sub-new::after {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 21px;
 }
 .price-item {
   width: 267px;
@@ -1102,7 +1130,7 @@ a.sub-new::after {
   line-height: 1.5;
   font-weight: 700;
   color: white;
-  padding-left: 25px;
+  padding-left: 35px;
 }
 .price-heading a {
   font-size: 16px;
@@ -1141,7 +1169,7 @@ a.sub-new::after {
 .features-block {
   padding-top: 25px;
   padding-left: 20px;
-  margin-top: -10px;
+  margin-top: -21px;
   margin-bottom: 40px;
   width: 1146px;
   min-height: 306px;
@@ -1415,7 +1443,7 @@ a.sub-new::after {
 }
 .map-contacts {
   position: absolute;
-  right: 26px;
+  right: 27px;
   top: 62px;
   width: 302px;
   min-height: 305px;
@@ -1532,9 +1560,15 @@ a.sub-new::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
-.footer-line {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+.footer-line::before {
+  top: -11px;
+  height: 1px;
+  width: 1146px;
+  background-image: url("../img/footer_line.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 .footer-social ul {
   display: -webkit-box;
@@ -1650,3 +1684,28 @@ a.sub-new::after {
 .copyright a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+
+
+
+
+  /* ----------------*/ 
+
+/*
+  width: 1146px;
+  top: 1px;
+  border-top: 5px solid red;
+rgba(255, 255, 255, 0.3)
+
+.basket-table .popup-close::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  width: 11px;
+  height: 11px;
+  background-image: url("../img/cross_small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}*/
+
